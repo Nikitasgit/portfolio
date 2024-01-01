@@ -1,0 +1,52 @@
+.navbar {
+  position: fixed;
+  right: 40px;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  gap: 10px;
+  align-items: flex-end;
+  color: $color-1;
+  font-family: $font-2;
+  text-transform: uppercase;
+
+  li {
+    position: relative;
+    font-size: 2rem;
+    font-family: $font-3;
+    letter-spacing: 3px;
+    color: $color-1;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover::after {
+      position: absolute;
+      content: "";
+      background: #fdc178;
+      height: 0.1rem;
+      transform: translateY(50%);
+      bottom: 50%;
+      width: 110%;
+      left: -5%;
+      border-radius: 500px;
+    }
+    &:hover {
+      letter-spacing: 5px;
+      /*    color: white; */
+    }
+  }
+  .on-page {
+    color: rgb(129, 67, 67);
+    &::after {
+      position: absolute;
+      content: "";
+      background: #fdc178;
+      height: 0.1rem;
+      transform: translateY(50%);
+      bottom: 50%;
+      width: 110%;
+      left: -5%;
+      border-radius: 500px;
+    }
+  }
+}

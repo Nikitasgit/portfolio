@@ -1,0 +1,118 @@
+@keyframes shadowbg {
+  0% {
+    -webkit-box-shadow: inset 0px 0px 200px 50px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0px 0px 200px 50px rgba(0, 0, 0, 0.8);
+  }
+  25% {
+    -webkit-box-shadow: inset 50px 0px 200px 50px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 50px 0px 200px 50px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    -webkit-box-shadow: inset 30px 50px 200px 50px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 30px 50px 200px 50px rgba(0, 0, 0, 0.8);
+  }
+  75% {
+    -webkit-box-shadow: inset -20px -30px 200px 50px rgba(0, 0, 0, 0.8);
+    box-shadow: inset -20px -30px 200px 50px rgba(0, 0, 0, 8);
+  }
+  100% {
+    -webkit-box-shadow: inset 10px 50px 200px 50px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 10px 50px 200px 50px rgba(0, 0, 0, 0.8);
+  }
+}
+@font-face {
+  font-family: "JosefinSans-SemiBold";
+  src: url(../assets/fonts/JosefinSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Urbanist-VariableFont_wght";
+  src: url(../assets/fonts/Urbanist-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Anton-Regular";
+  src: url(../assets/fonts/Anton-Regular.ttf);
+}
+@font-face {
+  font-family: "Righteous-Regular";
+  src: url(../assets/fonts/Righteous-Regular.ttf);
+}
+$font-1: "JosefinSans-SemiBold";
+$font-2: "Urbanist-VariableFont_wght";
+$font-3: "Anton-Regular";
+$font-4: "Righteous-Regular";
+
+$color-1: rgb(219, 219, 219);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+
+  user-select: none;
+}
+body {
+  overflow-x: hidden;
+}
+h1,
+h3 {
+  font-family: $font-2;
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+h2 {
+  color: rgb(169, 87, 87);
+  font-family: $font-4;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+h4,
+h5,
+p {
+  font-family: $font-3;
+}
+.line-container {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  bottom: 0%;
+  text-align: center;
+  overflow: hidden;
+}
+svg {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(29, 56, 57);
+  -webkit-box-shadow: inset 0px 0px 200px 30px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0px 0px 200px 30px rgba(0, 0, 0, 0.8);
+}
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

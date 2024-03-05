@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Art from "./pages/Art";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
 import Lenis from "@studio-freight/lenis";
+
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis();
@@ -14,6 +15,7 @@ const App = () => {
     }
     requestAnimationFrame(raf);
   }, []);
+
   return (
     <div className="app">
       <BrowserRouter>

@@ -1,7 +1,5 @@
 .home {
-  /*   background: rgb(38, 68, 128); */
   position: relative;
-
   .home-main {
     height: 100vh;
     color: $color-1;
@@ -10,10 +8,12 @@
 
     .home-main-container {
       display: flex;
-      .img-victor {
+      /*       .img-victor {
         align-self: flex-start;
-      }
+      } */
+
       height: 100vh;
+      height: 100svh;
       padding: 40px;
       justify-content: space-between;
       align-items: flex-end;
@@ -38,9 +38,10 @@
           justify-content: flex-end;
         }
         .img-seashell-white {
+          margin-right: 5px;
           object-fit: cover;
           height: 100%;
-          max-width: 110px;
+          width: 110px;
           cursor: pointer;
           z-index: 10;
         }
@@ -53,12 +54,51 @@
         }
       }
     }
+    @media screen and (max-width: 980px) {
+      .home-main-container {
+        padding: 20px;
+        .text-home-main {
+          h1 {
+            font-size: 4rem;
+          }
+          h2 {
+            font-size: 2.5rem;
+          }
+          h3 {
+            font-size: 1rem;
+            letter-spacing: 3px;
+          }
+          .img-seashell-white {
+            width: 65px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 450px) {
+      .home-main-container {
+        padding: 10px;
+        .text-home-main {
+          h1 {
+            font-size: 2.3rem;
+          }
+          h2 {
+            font-size: 2rem;
+          }
+          h3 {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+          }
+          .img-seashell-white {
+            width: 35px;
+          }
+        }
+      }
+    }
   }
   .main-second-part {
     position: relative;
-    padding: 50px 150px 220px;
+    padding: 50px 50px 220px;
     text-align: center;
-    /*     background: rgb(21, 21, 25); */
     h2 {
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -115,103 +155,86 @@
         }
       }
     }
-  }
-  .main-third-part {
-    height: 100vh;
-    position: relative;
-    display: flex;
-    padding: 70px 0px 150px;
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-
-    /*     background: url(/assets/images/coffee-cup-wooden-board.jpg) center/cover; */
-    h3 {
-      color: $color-1;
-      font-size: 1.3rem;
-    }
-    .display-text {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      text-align: center;
-      z-index: 200;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      background: #1f1f1fcb;
-      padding: 30px;
-      color: white;
-      border-radius: 20px;
-      h5 {
-        font-family: $font-2;
-        font-size: 1.2rem;
-      }
-      button {
-        background: none;
-        border: none;
-        color: #fdc178b6;
-        font-family: $font-2;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-size: 1rem;
-
-        cursor: pointer;
-        max-width: 25%;
+    @media screen and (max-width: 1100px) {
+      h2 {
+        font-size: 2.8rem;
       }
     }
-    .pencil {
-      height: 200px;
-      cursor: grab;
-      z-index: 300;
-      position: absolute;
-      bottom: 50%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-      &:active {
-        cursor: grabbing;
+    @media screen and (max-width: 800px) {
+      padding: 50px 20px 110px;
+      h2 {
+        font-size: 2rem;
+        padding-bottom: 20px;
+      }
+      .projects-gallery {
+        gap: 10px;
+        .prj-wrapper-1,
+        .prj-wrapper-2 {
+          gap: 10px;
+        }
       }
     }
-    .button-third-part {
-      width: 180px;
-      height: 60px;
-      border: none;
-      border-radius: 15px;
-      font-size: 2rem;
-      cursor: pointer;
-    }
-    .imgs-container {
-      position: relative;
-      height: 70vh;
-      width: 90vw;
-      display: flex;
-      align-items: center;
-
-      img {
-        height: 90%;
-        position: absolute;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        object-fit: cover;
-        max-width: 300px;
+    @media screen and (max-width: 510px) {
+      .projects-gallery {
+        .prj-wrapper-1,
+        .prj-wrapper-2 {
+          flex-direction: column;
+          div:hover {
+            width: 100%;
+            p {
+              opacity: 1;
+            }
+          }
+          .prj {
+            width: 100%;
+          }
+        }
       }
     }
   }
+
   .main-fourth-part {
+    padding-top: 50px;
+    text-align: center;
+
     .list {
-      font-size: 10rem;
+      font-size: 9rem;
       text-transform: uppercase;
       display: flex;
+
       width: 100%;
-      padding-top: 100px;
-      align-items: center;
       gap: 15px;
       flex-direction: column;
       color: $color-1;
       font-family: $font-4;
+    }
+    @media screen and (max-width: 950px) {
+      .list {
+        font-size: 5.3rem;
+        gap: 45px;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      .list {
+        font-size: 4.5rem;
+        gap: 60px;
+      }
+    }
+    @media screen and (max-width: 650px) {
+      .list {
+        font-size: 3.5rem;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .list {
+        font-size: 2.8rem;
+        gap: 100px;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .list {
+        font-size: 2rem;
+      }
     }
   }
   .main-fifth-part {
@@ -229,6 +252,7 @@
         color: #fdc178b6;
         font-size: 1.3rem;
         letter-spacing: 1px;
+        font-family: $font-2;
       }
       h2 {
         width: 100%;
@@ -242,19 +266,29 @@
       flex-direction: column;
       height: 100%;
       .img-container {
-        position: relative;
         width: 100%;
         z-index: 10;
-        height: 100vh;
-
+        margin: 100px 0;
         img {
-          position: absolute;
           backdrop-filter: blur(5px);
-          top: 0;
-          /*           padding: 20px;
-          border: 1px solid #fdc178b6; */
-          border-radius: 5px;
-          height: 80vh;
+
+          max-height: 90vh;
+          max-height: 90svh;
+          max-width: 65vw;
+        }
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .text-scrolling {
+        h2 {
+          font-size: 9rem;
+        }
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .text-scrolling {
+        h2 {
+          font-size: 7rem;
         }
       }
     }

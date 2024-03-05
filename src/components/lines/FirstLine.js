@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const FirstLine = () => {
   return (
-    <div className="line-container">
+    <div className="montain-line-container">
       <svg
         fill="none"
         preserveAspectRatio="xMidYMax meet"

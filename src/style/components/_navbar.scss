@@ -10,7 +10,6 @@
   color: $color-1;
   font-family: $font-2;
   text-transform: uppercase;
-
   li {
     position: relative;
     font-size: 2rem;
@@ -47,6 +46,18 @@
       width: 110%;
       left: -5%;
       border-radius: 500px;
+    }
+  }
+  @media screen and (max-width: 980px) {
+    right: 20px;
+    top: 20px;
+  }
+  @media screen and (max-width: 450px) {
+    right: 10px;
+    top: 10px;
+    gap: 0;
+    li {
+      font-size: 1.6rem;
     }
   }
 }

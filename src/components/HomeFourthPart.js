@@ -1,8 +1,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 
 function Item({ props }) {
   const ref = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
   });
@@ -23,14 +24,14 @@ const HomeFourthPart = () => {
   return (
     <div className="main-fourth-part">
       <ul className="list">
-        <Item props="Artiste" />
-        <Item props="Passionné" />
-        <Item props="Créatif" />
-        <Item props="Patient" />
-        <Item props="bla bla" />
-        <Item props="bla bla" />
-        <Item props="bla bla" />
-        <Item props="bla bla" />
+        <Item props="Detail-Oriented" />
+        <Item props="Proactive" />
+        <Item props="Adaptable" />
+        <Item props="Punctual" />
+        <Item props="Curious" />
+        <Item props="Client-Focused" />
+        <Item props="Team Player" />
+        <Item props="Communicative" />
       </ul>
     </div>
   );

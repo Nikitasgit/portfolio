@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import soundHover from "../assets/sounds/sound-2.wav";
 import { NavLink, useLocation } from "react-router-dom";
 const Navbar = () => {

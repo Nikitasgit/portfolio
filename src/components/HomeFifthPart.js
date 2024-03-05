@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import ImgSquidPng from "../assets/images/calamar.png";
-import ImgCrabPng from "../assets/images/seashell.png";
+
 import ImgBirdPng from "../assets/images/huppe-fascie.png";
 import ImgCaptain from "../assets/images/gallery/CaptainIannis-1100px.jpg";
 import ImgCaptainWoman from "../assets/images/gallery/Captainwoman-1100px.jpg";
@@ -14,41 +14,47 @@ const HomeFifthPart = () => {
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-101%"]);
-  const xOpposite = useTransform(scrollYProgress, [0, 1], ["-100%", "50%"]);
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-105%"]);
+  const xOpposite = useTransform(scrollYProgress, [0, 1], ["-105%", "50%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   return (
     <div className="main-fifth-part" ref={ref}>
       <motion.div className="text-scrolling">
         <motion.p style={{ x: xOpposite }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi in
-          neque sint aut voluptatum repudiandae, debitis error expedita cumque
-          ea adipisci molestias, provident nobis, iste ullam non illum. Pariatur
-          repellendus consequatur aspernatur non labore libero necessitatibus
-          temporibus dolore, sequi dicta, facere odit mollitia fugiat esse
-          recusandae voluptatibus harum nisi sed.
+          When I immerse myself in the creative process, whether sketching or
+          coding, I derive immense satisfaction from meticulously refining every
+          detail, investing the necessary time to achieve excellence.
         </motion.p>
         <motion.h2 style={{ x }}>Linocut and Pencil drawing</motion.h2>
       </motion.div>
       <div className="images-wrapper">
-        <div className="img-container">
-          <img style={{ left: "55%" }} src={ImgSquidPng} alt="" />
+        <div className="img-container" style={{ transform: "translateX(15%)" }}>
+          <img src={ImgSquidPng} alt="" />
+        </div>
+        <div
+          className="img-container"
+          style={{ zIndex: 0, transform: "translateX(20%)" }}
+        >
+          <img src={ImgBirdPng} alt="" />
         </div>
         <div className="img-container">
-          <img style={{ left: "10%" }} src={ImgBirdPng} alt="" />
+          <img src={ImgCaptain} alt="" />
         </div>
-        <div className="img-container">
-          <img style={{ left: "35%" }} src={ImgCaptain} alt="" />
+        <div
+          className="img-container"
+          style={{ zIndex: 0, transform: "translateX(22%)" }}
+        >
+          <img src={ImgCaptainWoman} alt="" />
         </div>
-        <div className="img-container">
-          <img style={{ left: "5%" }} src={ImgCaptainWoman} alt="" />
-        </div>
-        <div className="img-container">
-          <img style={{ left: "50%" }} src={ImgMarin} alt="" />
+        <div className="img-container" style={{ transform: "translateX(3%)" }}>
+          <img src={ImgMarin} alt="" />
         </div>
 
-        <div className="img-container">
-          <img style={{ left: "20%" }} src={ImgKid} alt="" />
+        <div
+          className="img-container"
+          style={{ zIndex: 0, transform: "translateX(10%)" }}
+        >
+          <img src={ImgKid} alt="" />
         </div>
       </div>
     </div>

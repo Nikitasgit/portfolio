@@ -13,7 +13,7 @@ const Navbar = () => {
         <NavLink to="/">
           <li
             onMouseOver={play}
-            className={location.pathname == "/" ? "on-page" : ""}
+            className={location.pathname === "/" ? "on-page" : ""}
           >
             Home
           </li>
@@ -21,7 +21,7 @@ const Navbar = () => {
         <NavLink to="/art">
           <li
             onMouseOver={play}
-            className={location.pathname == "/art" ? "on-page" : ""}
+            className={location.pathname === "/art" ? "on-page" : ""}
           >
             Art Gallery
           </li>
@@ -29,7 +29,7 @@ const Navbar = () => {
         <NavLink to="/about">
           <li
             onMouseOver={play}
-            className={location.pathname == "/about" ? "on-page" : ""}
+            className={location.pathname === "/about" ? "on-page" : ""}
           >
             About me
           </li>

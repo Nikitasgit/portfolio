@@ -16,7 +16,7 @@ const HomeFifthPart = () => {
   });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-105%"]);
   const xOpposite = useTransform(scrollYProgress, [0, 1], ["-105%", "50%"]);
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
   return (
     <div className="main-fifth-part" ref={ref}>
       <motion.div className="text-scrolling">

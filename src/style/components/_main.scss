@@ -2,6 +2,7 @@
   position: relative;
   .home-main {
     height: 100vh;
+    height: 100svh;
     color: $color-1;
     position: relative;
     width: 100%;
@@ -238,7 +239,7 @@
     }
   }
   .main-fifth-part {
-    padding: 100px 30px;
+    padding: 100px 30px 100px;
     position: relative;
 
     width: 100%;
@@ -268,10 +269,9 @@
       .img-container {
         width: 100%;
         z-index: 10;
-        margin: 100px 0;
+        margin-bottom: 180px;
         img {
           backdrop-filter: blur(5px);
-
           max-height: 90vh;
           max-height: 90svh;
           max-width: 65vw;

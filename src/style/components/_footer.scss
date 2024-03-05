@@ -41,7 +41,7 @@
       }
     }
     .contact-img-container {
-      width: 20%;
+      max-width: 300px;
       min-width: 120px;
       display: flex;
       justify-content: center;
@@ -99,7 +99,7 @@
     }
     @media screen and (max-width: 560px) {
       padding: 150px 70px 25px;
-      gap: 10px;
+      /*     gap: 10px; */
       .contact-text {
         display: none;
         h3 {
@@ -117,7 +117,7 @@
     }
     @media screen and (max-width: 430px) {
       padding: 150px 12px 25px;
-      gap: 7px;
+      gap: 13px;
       .contact-img-container {
         min-width: 100px;
       }

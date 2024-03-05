@@ -5,7 +5,7 @@
   height: 100vh;
   height: 100svh;
   .footer {
-    padding: auto 50px;
+    padding: 220px 50px 50px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -17,6 +17,7 @@
       position: absolute;
       left: 0;
       top: 0;
+
       width: 100%;
       svg {
         min-width: 100vw;

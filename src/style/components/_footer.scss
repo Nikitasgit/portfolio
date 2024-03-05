@@ -1,128 +1,135 @@
-.footer {
-  padding: 230px 50px 50px;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+.footer-container {
   display: flex;
-  position: absolute;
-  color: $color-1;
-  gap: 30px;
-  .line-footer {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    svg {
-      min-width: 100vw;
-      min-height: 120px;
-    }
-  }
-  p {
-    font-family: $font-2;
-    font-size: 1.2rem;
-  }
-  .contact-text {
-    justify-content: center;
-    align-items: flex-start;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    h3 {
-      font-size: 3rem;
-      color: #fdc178;
-    }
-  }
-  .contact-img-container {
-    width: 20%;
-    min-width: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 100%;
 
-      border-radius: 20px;
+  align-items: flex-end;
+  height: 100vh;
+  height: 100svh;
+  .footer {
+    padding: auto 50px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    position: relative;
+    color: $color-1;
+    gap: 30px;
+    .line-footer {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      svg {
+        min-width: 100vw;
+        min-height: 120px;
+      }
     }
-  }
-  .contact-links {
-    & > div {
+    p {
+      font-family: $font-2;
+      font-size: 1.2rem;
+    }
+    .contact-text {
+      justify-content: center;
+      align-items: flex-start;
+      width: 50%;
       display: flex;
       flex-direction: column;
-      gap: 5px;
-    }
-    h4 {
-      color: #fdc178;
-      text-transform: uppercase;
-      font-family: $font-1;
-    }
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  @media screen and (max-width: 1130px) {
-    padding: 150px 25px 25px;
-    .contact-text {
-      p {
-        font-size: 1rem;
-      }
+      gap: 20px;
       h3 {
-        font-size: 2rem;
+        font-size: 3rem;
+        color: #fdc178;
       }
     }
-    .contact-links {
-      p {
-        font-size: 1rem;
-      }
-    }
-  }
-  @media screen and (max-width: 810px) {
-    .contact-text {
-      p {
-        display: none;
-      }
-    }
-  }
-  @media screen and (max-width: 700px) {
-    .line-footer {
-      svg {
-        transform: translateX(-20%);
-      }
-    }
-  }
-  @media screen and (max-width: 560px) {
-    padding: 150px 70px 25px;
-    gap: 10px;
-    .contact-text {
-      display: none;
-      h3 {
-        display: none;
-      }
-    }
-    .line-footer {
-      svg {
-        transform: translateX(-35%);
-      }
-    }
-  }
-  @media screen and (max-width: 480px) {
-    padding: 150px 35px 25px;
-  }
-  @media screen and (max-width: 430px) {
-    padding: 150px 12px 25px;
-    gap: 7px;
     .contact-img-container {
-      min-width: 100px;
-    }
+      width: 20%;
+      min-width: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
 
-    .contact-links {
-      p {
-        font-size: 0.9rem;
+        border-radius: 20px;
       }
     }
-    .line-footer {
-      svg {
-        transform: translateX(-45%);
+    .contact-links {
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      h4 {
+        color: #fdc178;
+        text-transform: uppercase;
+        font-family: $font-1;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    @media screen and (max-width: 1130px) {
+      padding: 150px 25px 25px;
+      .contact-text {
+        p {
+          font-size: 1rem;
+        }
+        h3 {
+          font-size: 2rem;
+        }
+      }
+      .contact-links {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+    @media screen and (max-width: 810px) {
+      .contact-text {
+        p {
+          display: none;
+        }
+      }
+    }
+    @media screen and (max-width: 700px) {
+      .line-footer {
+        svg {
+          transform: translateX(-20%);
+        }
+      }
+    }
+    @media screen and (max-width: 560px) {
+      padding: 150px 70px 25px;
+      gap: 10px;
+      .contact-text {
+        display: none;
+        h3 {
+          display: none;
+        }
+      }
+      .line-footer {
+        svg {
+          transform: translateX(-35%);
+        }
+      }
+    }
+    @media screen and (max-width: 480px) {
+      padding: 150px 35px 25px;
+    }
+    @media screen and (max-width: 430px) {
+      padding: 150px 12px 25px;
+      gap: 7px;
+      .contact-img-container {
+        min-width: 100px;
+      }
+
+      .contact-links {
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      .line-footer {
+        svg {
+          transform: translateX(-45%);
+        }
       }
     }
   }

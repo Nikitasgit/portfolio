@@ -52,7 +52,7 @@ const HomeFifthPart = () => {
 
         <div
           className="img-container"
-          style={{ zIndex: 0, transform: "translateX(10%)" }}
+          style={{ zIndex: 0, transform: "translateX(10%)", marginBottom: 0 }}
         >
           <img src={ImgKid} alt="" />
         </div>

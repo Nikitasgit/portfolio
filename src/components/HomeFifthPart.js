@@ -14,7 +14,7 @@ const HomeFifthPart = () => {
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-105%"]);
   const xOpposite = useTransform(scrollYProgress, [0, 1], ["-105%", "50%"]);
 
   return (

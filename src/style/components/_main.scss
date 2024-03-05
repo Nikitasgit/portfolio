@@ -157,12 +157,22 @@
       }
     }
     @media screen and (max-width: 1100px) {
+      .projects-gallery {
+        .prj-wrapper-1,
+        .prj-wrapper-2 {
+          .prj {
+            p {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
       h2 {
         font-size: 2.8rem;
       }
     }
     @media screen and (max-width: 800px) {
-      padding: 50px 20px 110px;
+      padding: 50px 20px 220px;
       h2 {
         font-size: 2rem;
         padding-bottom: 20px;
@@ -172,6 +182,12 @@
         .prj-wrapper-1,
         .prj-wrapper-2 {
           gap: 10px;
+          .prj {
+            p {
+              font-size: 1.2rem;
+              letter-spacing: 1px;
+            }
+          }
         }
       }
     }
@@ -180,11 +196,16 @@
         .prj-wrapper-1,
         .prj-wrapper-2 {
           flex-direction: column;
-          div:hover {
-            width: 100%;
+          .prj {
             p {
               opacity: 1;
             }
+          }
+          div:hover {
+            width: 100%;
+            /*      p {
+              opacity: 1;
+            } */
           }
           .prj {
             width: 100%;

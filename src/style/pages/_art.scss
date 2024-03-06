@@ -1,7 +1,8 @@
 .art-page {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 5px;
+  padding-top: 50px;
   .carousel-gallery-modal {
     position: fixed;
     background: #ffffff34;
@@ -45,7 +46,7 @@
   .container-images {
     display: flex;
     margin: 0 auto;
-    max-width: 65%;
+    max-width: 70%;
     .subcontainer-images {
       display: flex;
       flex-direction: column;
@@ -61,7 +62,6 @@
       display: flex;
       transition: 0.3s;
       &:hover {
-        /*         scale: 1.03; */
         cursor: pointer;
       }
       img {
@@ -72,62 +72,17 @@
       }
     }
   }
-  .grid-main-right {
-    margin: 0 auto;
-    max-width: 70%;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "a main"
-      "c main";
 
-    .main-grid {
-      grid-area: main;
-    }
-    .img-container {
-      width: 100%;
-      aspect-ratio: 3/4;
-      padding: 15px;
-      border-radius: 5px;
-      display: flex;
-      img {
-        aspect-ratio: 3/4;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-      }
+  @media screen and (max-width: 900px) {
+    .container-images {
+      max-width: 90%;
     }
   }
-  .grid-main-left {
-    margin: 0 auto;
-    max-width: 70%;
-    display: grid;
 
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "main a"
-      "main c";
-
-    /*     width: 70%; */
-    .main-grid {
-      grid-area: main;
-    }
-    .img-container {
-      padding: 15px;
-      aspect-ratio: 3/4;
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-      }
+  @media screen and (max-width: 500px) {
+    .container-images {
+      max-width: 100%;
+      padding: 0 5px;
     }
   }
 }

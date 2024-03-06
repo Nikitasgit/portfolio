@@ -43,7 +43,7 @@ const images = [
 ];
 
 const Art = () => {
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
   const [modifiedArray, setModifiedArray] = useState(images);
 
   const modifyArray = (array, startIndex) => {

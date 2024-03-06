@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-top: 40px;
+
   .carousel-gallery-modal {
     position: fixed;
     background: #ffffff34;
     backdrop-filter: blur(2px);
-
     height: 100vh;
     height: 100svh;
     width: 100%;

@@ -14,8 +14,8 @@ const HomeFifthPart = () => {
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-105%"]);
-  const xOpposite = useTransform(scrollYProgress, [0, 1], ["-105%", "50%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
+  const xOpposite = useTransform(scrollYProgress, [0, 1], ["-100%", "50%"]);
 
   return (
     <div className="main-fifth-part" ref={ref}>
@@ -52,7 +52,7 @@ const HomeFifthPart = () => {
 
         <div
           className="img-container"
-          style={{ zIndex: 0, transform: "translateX(10%)", marginBottom: 0 }}
+          style={{ zIndex: 0, transform: "translateX(20%)", marginBottom: 0 }}
         >
           <img src={ImgKid} alt="" />
         </div>

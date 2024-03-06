@@ -1,5 +1,6 @@
 .home {
   position: relative;
+
   .home-main {
     height: 100vh;
     height: 100svh;
@@ -260,15 +261,16 @@
     }
   }
   .main-fifth-part {
-    padding: 100px 30px 100px;
+    padding-bottom: 30px;
     position: relative;
-
+    padding-top: 120px;
     width: 100%;
     .text-scrolling {
       position: sticky;
       z-index: 1;
       width: max-content;
       top: 50%;
+      transform: translateY(-50%);
 
       p {
         color: #fdc178b6;

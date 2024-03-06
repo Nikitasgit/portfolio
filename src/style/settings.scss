@@ -92,16 +92,16 @@ p {
 }
 .shadow {
   position: fixed;
-  top: 0;
+  top: 0vh;
   left: 0;
   height: 100vh;
-
   width: 100%;
   overflow: hidden;
-  background: #386464;
-  /*   animation: shadowbg 10s infinite alternate; */
-  -webkit-box-shadow: inset 0px 0px 200px 70px rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0px 0px 200px 70px rgba(0, 0, 0, 0.8);
+  background: #243e3e;
+
+  box-shadow: inset 0px 0px 200px 70px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 0px 200px 70px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 0px 200px 70px rgba(0, 0, 0, 0.5);
 }
 html.lenis {
   height: auto;

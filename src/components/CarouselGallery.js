@@ -4,10 +4,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useEffect, useState } from "react";
+/* import { useEffect, useState } from "react"; */
 
 const CarouselGallery = ({ imgs }) => {
-  const [windowDimensions, setWindowDimensions] = useState(
+  /*   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
   function getWindowDimensions() {
@@ -25,7 +25,7 @@ const CarouselGallery = ({ imgs }) => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, []); */
   return (
     <Swiper
       className="carousel"

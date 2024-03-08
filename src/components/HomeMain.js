@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ImgSeashellWhite from "../assets/images/seashell-white.png";
-
+import mainImgBg from "../assets/images/victor-hydra.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import FirstLine from "./lines/FirstLine";
 const HomeMain = () => {
@@ -35,8 +35,10 @@ const HomeMain = () => {
   return (
     <div ref={containerRef} className="home-main">
       {windowDimensions.width > 845 && <FirstLine />}
-
       <motion.div className="home-main-container" style={{ opacity }}>
+        <div className="main-img-container">
+          <img src={mainImgBg} alt="" />
+        </div>
         <div className="text-home-main">
           <div className="text-container">
             <h2>Creative,</h2>

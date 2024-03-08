@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ImgSeashellWhite from "../assets/images/seashell-white.png";
-import mainImgBg from "../assets/images/victor-hydra.jpg";
+import mainImgBg from "../assets/images/IMG-20240308-WA0000.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import FirstLine from "./lines/FirstLine";
 const HomeMain = () => {
@@ -31,14 +31,16 @@ const HomeMain = () => {
 
   const rotate = useTransform(scrollYProgress, [0, 0.85], [0, 360]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
     <div ref={containerRef} className="home-main">
-      {windowDimensions.width > 845 && <FirstLine />}
+      {windowDimensions.width > 655 && <FirstLine />}
+
       <motion.div className="home-main-container" style={{ opacity }}>
-        <div className="main-img-container">
+        <motion.div className="main-img-container" style={{ y }}>
           <img src={mainImgBg} alt="" />
-        </div>
+        </motion.div>
+
         <div className="text-home-main">
           <div className="text-container">
             <h2>Creative,</h2>

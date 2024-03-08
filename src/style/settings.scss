@@ -40,7 +40,7 @@ h3 {
   letter-spacing: 5px;
 }
 h2 {
-  color: rgb(169, 87, 87);
+  color: rgb(182, 95, 95);
   font-family: $font-4;
   font-size: 4rem;
   text-transform: uppercase;
@@ -83,9 +83,9 @@ p {
   bottom: 0%;
   svg {
     min-width: 100vw;
-    min-height: 170px;
+    min-height: 130px;
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1000px) {
     svg {
       transform: translateX(-13%);
     }

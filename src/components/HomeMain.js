@@ -1,28 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import ImgSeashellWhite from "../assets/images/seashell-white.png";
-import mainImgBg from "../assets/images/IMG-20240308-WA0000.jpg";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import FirstLine from "./lines/FirstLine";
 const HomeMain = () => {
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-  function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height,
-    };
-  }
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -31,7 +12,7 @@ const HomeMain = () => {
 
   const rotate = useTransform(scrollYProgress, [0, 0.85], [0, 360]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   return (
     <div ref={containerRef} className="home-main">
       <FirstLine />

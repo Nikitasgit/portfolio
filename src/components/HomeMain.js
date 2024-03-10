@@ -34,12 +34,12 @@ const HomeMain = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
     <div ref={containerRef} className="home-main">
-      {windowDimensions.width > 655 && <FirstLine />}
+      <FirstLine />
 
       <motion.div className="home-main-container" style={{ opacity }}>
-        <motion.div className="main-img-container" style={{ y }}>
+        {/*        <motion.div className="main-img-container" style={{ y }}>
           <img src={mainImgBg} alt="" />
-        </motion.div>
+        </motion.div> */}
 
         <div className="text-home-main">
           <div className="text-container">

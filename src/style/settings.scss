@@ -76,18 +76,20 @@ p {
   }
 }
 .montain-line-container {
-  z-index: 100;
+  z-index: 1000;
   position: absolute;
-  width: 100vw;
-  left: 0%;
-  bottom: 0%;
+  height: 100vh;
+  left: 10%;
+  top: -30%;
+
   svg {
-    min-width: 100vw;
-    min-height: 130px;
+    height: 130vh;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 470px) {
+    left: -23%;
+    top: -20%;
     svg {
-      transform: translateX(-13%);
+      height: 105vh;
     }
   }
 }

@@ -79,17 +79,17 @@ p {
   z-index: 1000;
   position: absolute;
   height: 100vh;
-  left: 10%;
-  top: -30%;
+  left: 0%;
+  top: -40%;
 
   svg {
     height: 130vh;
   }
   @media screen and (max-width: 470px) {
-    left: -23%;
-    top: -20%;
+    left: -45%;
+    top: -17%;
     svg {
-      height: 105vh;
+      height: 90vh;
     }
   }
 }

@@ -1,0 +1,131 @@
+@keyframes animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/ 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 60% 60% 70% 40%/ 50% 60% 60% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/ 60% 30% 70% 40%;
+  }
+}
+
+.about-page {
+  background: #182336;
+  .about-page-no-footer {
+    position: relative;
+    .about-main {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      margin-bottom: 50px;
+      .blob {
+        z-index: 10;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("/assets/images/victor-hydra-2-removebg-preview.png"),
+          linear-gradient(
+            0deg,
+            rgba(3, 4, 6, 1) 0%,
+            rgba(24, 35, 54, 1) 14%,
+            rgba(134, 237, 237, 1) 100%
+          );
+        background-size: cover;
+        background-color: rgb(3, 4, 6);
+        background-position: 20% center;
+        height: 400px;
+        width: 400px;
+        box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+        animation: animate 15s ease-in-out infinite;
+        transition: animate 1s ease-in-out;
+        transition: 0.6s ease-in-out;
+      }
+      .skills {
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: min-content;
+        & > div {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+        }
+        h4 {
+          font-family: $font-1;
+          color: white;
+        }
+      }
+      .aboutDescription {
+        position: absolute;
+        top: 0%;
+
+        font-family: $font-2;
+        color: white;
+        font-size: 1.4rem;
+        line-height: 29px;
+        font-weight: 500;
+
+        margin: 40px;
+        /*         height: 100%; */
+        max-width: 22vw;
+      }
+      .titles {
+        color: white;
+        position: absolute;
+        bottom: 0%;
+        font-size: 2.5rem;
+        margin: 40px;
+        left: 0%;
+      }
+      @media screen and (max-width: 1250px) {
+        .blob {
+          height: 300px;
+          width: 300px;
+        }
+        .aboutDescription {
+          font-size: 1.2rem;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        .blob {
+          top: 40px;
+          transform: translate(-50%, 0%);
+          height: 200px;
+          width: 200px;
+        }
+        .aboutDescription {
+          font-size: 1.1rem;
+          line-height: 25px;
+        }
+        .titles {
+          font-size: 2rem;
+        }
+      }
+      @media screen and (max-width: 980px) {
+        .blob {
+          display: none;
+        }
+        .aboutDescription {
+          font-size: 1.3rem;
+          line-height: 30px;
+          margin: 20px;
+          max-width: 40%;
+        }
+        .titles {
+          font-size: 1.3rem;
+          margin: 20px;
+        }
+        .skills {
+          margin: 20px;
+        }
+      }
+    }
+  }
+}

@@ -28,12 +28,14 @@ const HomeFifthPart = () => {
         <motion.h2 style={{ x }}>Linocut and Pencil drawing</motion.h2>
       </motion.div>
       <div className="images-wrapper">
-        <div className="img-container" style={{ transform: "translateX(15%)" }}>
+        <div
+          className="img-container" /* style={{ transform: "translateX(15%)" }} */
+        >
           <img src={ImgSquidPng} alt="" />
         </div>
         <div
           className="img-container"
-          style={{ zIndex: 0, transform: "translateX(20%)" }}
+          style={{ zIndex: 0 /* , transform: "translateX(20%)" */ }}
         >
           <img src={ImgBirdPng} alt="" />
         </div>
@@ -42,17 +44,22 @@ const HomeFifthPart = () => {
         </div>
         <div
           className="img-container"
-          style={{ zIndex: 0, transform: "translateX(22%)" }}
+          style={{ zIndex: 0 /* , transform: "translateX(22%)" */ }}
         >
           <img src={ImgCaptainWoman} alt="" />
         </div>
-        <div className="img-container" style={{ transform: "translateX(3%)" }}>
+        <div
+          className="img-container" /* style={{ transform: "translateX(3%)" }} */
+        >
           <img src={ImgMarin} alt="" />
         </div>
 
         <div
           className="img-container"
-          style={{ zIndex: 0, transform: "translateX(20%)", marginBottom: 0 }}
+          style={{
+            zIndex: 0,
+            /* transform: "translateX(20%)",  */ marginBottom: 0,
+          }}
         >
           <img src={ImgKid} alt="" />
         </div>

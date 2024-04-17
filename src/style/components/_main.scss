@@ -1,5 +1,8 @@
 .home {
   position: relative;
+  background: radial-gradient(#03687a, #091813);
+  transition: 0.5s;
+  animation: bgColor 30s infinite;
 
   .home-main {
     height: 100vh;
@@ -36,7 +39,9 @@
       /*       .img-victor {
         align-self: flex-start;
       } */
-
+      img {
+        width: 100%;
+      }
       height: 100vh;
       height: 100svh;
       padding: 40px;
@@ -80,10 +85,7 @@
         }
       }
     }
-    @media screen and (max-width: 980px) {
-      .main-img-container {
-        top: 26%;
-      }
+    @media screen and (max-width: 1200px) {
       .home-main-container {
         padding: 20px;
         .text-home-main {
@@ -320,6 +322,8 @@
         width: 100%;
         z-index: 10;
         margin-bottom: 180px;
+        display: flex;
+        justify-content: center;
         img {
           backdrop-filter: blur(5px);
           max-height: 90vh;

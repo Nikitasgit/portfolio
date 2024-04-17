@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div className="home">
-      <div className="shadow"></div>
       <HomeMain />
       <HomeSecondPart />
       <HomeFourthPart />

@@ -1,0 +1,23 @@
+@keyframes blinking {
+  from {
+    background: #96ce9c2c;
+  }
+  to {
+    background: #96ce9c;
+  }
+}
+
+.progressBar {
+  display: flex;
+  gap: 3px;
+  height: 8px;
+  .barElement {
+    width: 50px;
+    background: #96ce9c50;
+    border-radius: 2px;
+  }
+  .highlighted {
+    animation: blinking 2s;
+    background: #96ce9c;
+  }
+}

@@ -7,25 +7,6 @@ import "swiper/css/scrollbar";
 /* import { useEffect, useState } from "react"; */
 
 const CarouselGallery = ({ imgs }) => {
-  /*   const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-  function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height,
-    };
-  }
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []); */
   return (
     <Swiper
       className="carousel"

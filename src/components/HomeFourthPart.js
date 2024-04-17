@@ -17,7 +17,7 @@ function Item({ props }) {
   );
   const assignFontSize = () => {
     if (windowDimensions.width < 400) {
-      return ["1.2rem", "2rem", "1.5rem", "1.2rem"];
+      return ["1.2rem", "2rem", "1.8rem", "1.2rem"];
     }
     if (windowDimensions.width < 500) {
       return ["1.7rem", "2.8rem", "2.2rem", "1.7rem"];

@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 
 import { motion, useScroll } from "framer-motion";
 
-import { Cursor, Typewriter, useTypewriter } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 const About = () => {
   const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
@@ -32,81 +32,80 @@ const About = () => {
 
   return (
     <div className="about-page">
-      <div className="about-page-no-footer">
-        <div className="about-main" ref={mainRef}>
-          <motion.div
-            className="blob"
-            style={{
-              top: !isAtTop && "40px",
-              /*               left: !isAtTop && "40px", */
-              transform: !isAtTop && "translate(-50%,0%)",
+      <div className="about-main" ref={mainRef}>
+        <motion.div
+          className="blob"
+          style={{
+            bottom: !isAtTop && "40px",
+            transform: !isAtTop && "translate(-50%,50%)",
 
-              height: !isAtTop && "175px",
-              width: !isAtTop && "175px",
-            }}
-          ></motion.div>
-          <div className="skills">
-            <div>
-              <h4>Javascript</h4>
-              <div className="progressBar">
-                {js.map((element) => (
-                  <div
-                    className={`barElement ${element === 1 && "highlighted"}`}
-                  ></div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h4>React</h4>
-              <div className="progressBar">
-                {react.map((element) => (
-                  <div
-                    className={`barElement ${element === 1 && "highlighted"}`}
-                  ></div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h4>NodeJs</h4>
-              <div className="progressBar">
-                {nodeJs.map((element) => (
-                  <div
-                    className={`barElement ${element === 1 && "highlighted"}`}
-                  ></div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h4>Framer Motion</h4>
-              <div className="progressBar">
-                {framerMotion.map((element) => (
-                  <div
-                    className={`barElement ${element === 1 && "highlighted"}`}
-                  ></div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h4>SASS</h4>
-              <div className="progressBar">
-                {sass.map((element) => (
-                  <div
-                    className={`barElement ${element === 1 && "highlighted"}`}
-                  ></div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h4>Redux Toolkit</h4>
-              <div className="progressBar">
-                {reduxToolkit.map((element) => (
-                  <div
-                    className={`barElement ${element === 1 && "highlighted"}`}
-                  ></div>
-                ))}
-              </div>
+            height: !isAtTop && "200px",
+            width: !isAtTop && "200px",
+          }}
+        ></motion.div>
+        <div className="skills">
+          <div>
+            <h4>Javascript</h4>
+            <div className="progressBar">
+              {js.map((element) => (
+                <div
+                  className={`barElement ${element === 1 && "highlighted"}`}
+                ></div>
+              ))}
             </div>
           </div>
+          <div>
+            <h4>React</h4>
+            <div className="progressBar">
+              {react.map((element) => (
+                <div
+                  className={`barElement ${element === 1 && "highlighted"}`}
+                ></div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4>NodeJs</h4>
+            <div className="progressBar">
+              {nodeJs.map((element) => (
+                <div
+                  className={`barElement ${element === 1 && "highlighted"}`}
+                ></div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4>Framer Motion</h4>
+            <div className="progressBar">
+              {framerMotion.map((element) => (
+                <div
+                  className={`barElement ${element === 1 && "highlighted"}`}
+                ></div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4>SASS</h4>
+            <div className="progressBar">
+              {sass.map((element) => (
+                <div
+                  className={`barElement ${element === 1 && "highlighted"}`}
+                ></div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4>Redux Toolkit</h4>
+            <div className="progressBar">
+              {reduxToolkit.map((element) => (
+                <div
+                  className={`barElement ${element === 1 && "highlighted"}`}
+                ></div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="description-titles">
           <div className="aboutDescription">
             <Typewriter
               words={[
@@ -137,6 +136,7 @@ const About = () => {
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

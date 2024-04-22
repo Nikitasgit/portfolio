@@ -52,29 +52,66 @@ const HomeSecondPart = () => {
         </h2>
         <div /* style={{ opacity }} */ className="projects-gallery">
           <div className="prj-wrapper-1">
-            <div className="prj">
-              <img src={imgMoulinCastaSite} alt="" />
-              <p className="prj-description">
-                Project for holiday house in France.
-              </p>
+            <div className="project">
+              <a
+                href="http://www.moulincasta.fr"
+                className="prj"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={imgMoulinCastaSite} alt="" />
+                <p className="prj-description">
+                  Project for holiday house in France.
+                </p>
+              </a>
+              <h3 className="project-title">Le Moulin Casta</h3>
+              <div>
+                <div className="technologies">
+                  <h4>Technologies:</h4>
+                  <ul className="technologies-list">
+                    <li>React</li>
+                    <li>Node JS, Express</li>
+                    <li>MongoDB</li>
+                    <li>AWS (...,...)</li>
+                  </ul>
+                </div>
+                <p className="project-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores excepturi, voluptatem nesciunt cumque inventore
+                  fuga ex sint totam, quaerat quo consequuntur atque quidem nisi
+                  reiciendis amet, quasi ut libero nobis debitis reprehenderit
+                  nihil maiores aspernatur possimus. Animi minus non laboriosam
+                  debitis, dolores ab esse, dolore atque molestiae voluptates
+                  omnis magnam error blanditiis harum similique ea veritatis
+                  doloribus, quod dolor voluptatem velit ducimus! Hic voluptate
+                  debitis accusantium expedita repellendus, enim dignissimos
+                  minima commodi natus magni, fugiat culpa eius, pariatur
+                  voluptatem molestias.
+                </p>
+              </div>
             </div>
-            <div className="prj">
+            <a
+              href="https://nikitasgit.github.io/magesgame/"
+              className="prj"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={imgMagesGameSite} alt="" />
               <p className="prj-description">
                 Tic Tac Toe game, Player vs AI mode.
               </p>
-            </div>
+            </a>
           </div>
-          <div className="prj-wrapper-2">
-            <div className="prj">
+          {/*           <div className="prj-wrapper-2">
+            <a className="prj">
               <img src={imgSample2Site} alt="" />
               <p className="prj-description">This is a sample website.</p>
-            </div>
-            <div className="prj">
+            </a>
+            <a className="prj">
               <img src={imgSample1Site} alt="" />
               <p className="prj-description">This is a sample website.</p>
-            </div>
-          </div>
+            </a>
+          </div> */}
         </div>
       </motion.div>
     </div>

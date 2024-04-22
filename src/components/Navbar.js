@@ -1,40 +1,43 @@
-import React from "react";
+import React, { useRef } from "react";
 import soundHover from "../assets/sounds/sound-2.wav";
 import { NavLink, useLocation } from "react-router-dom";
 const Navbar = () => {
-  let play = () => {
+  const pages = [
+    { path: "/", title: "Home" },
+    { path: "/art", title: "Gallery" },
+    { path: "/about", title: "About" },
+  ];
+  const navbarRef = useRef(null);
+  const location = useLocation();
+  let playSound = () => {
     new Audio(soundHover).play();
   };
-  const location = useLocation();
+  let removeClasses = () => {
+    let children = Array.from(navbarRef.current.children);
+    children.forEach((child) => {
+      child.classList.remove("on-page");
+      const urlObject = new URL(child.href);
+
+      if (urlObject.pathname === location.pathname) {
+        child.classList.add("on-page");
+      }
+    });
+  };
+  let play = (event) => {
+    let children = Array.from(navbarRef.current.children);
+    children.forEach((child) => {
+      child.classList.remove("on-page");
+    });
+    event.target.classList.add("on-page");
+  };
 
   return (
-    <div>
-      <ul className="navbar">
-        <NavLink to="/">
-          <li
-            onMouseOver={play}
-            className={location.pathname === "/" ? "on-page" : ""}
-          >
-            Home
-          </li>
+    <div className="navbar" ref={navbarRef} onMouseOut={removeClasses}>
+      {pages.map((page) => (
+        <NavLink to={page.path} onMouseOver={play} onClick={playSound}>
+          {page.title}
         </NavLink>
-        <NavLink to="/art">
-          <li
-            onMouseOver={play}
-            className={location.pathname === "/art" ? "on-page" : ""}
-          >
-            Art Gallery
-          </li>
-        </NavLink>
-        <NavLink to="/about">
-          <li
-            onMouseOver={play}
-            className={location.pathname === "/about" ? "on-page" : ""}
-          >
-            About me
-          </li>
-        </NavLink>
-      </ul>
+      ))}
     </div>
   );
 };

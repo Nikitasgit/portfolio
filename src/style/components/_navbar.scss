@@ -10,7 +10,7 @@
   color: $color-1;
   font-family: $font-2;
   text-transform: uppercase;
-  li {
+  a {
     position: relative;
     font-size: 2rem;
     font-family: $font-3;
@@ -56,7 +56,7 @@
     right: 10px;
     top: 10px;
     gap: 0;
-    li {
+    a {
       font-size: 1.6rem;
     }
   }

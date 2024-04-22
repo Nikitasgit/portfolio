@@ -13,6 +13,30 @@
 
 .about-page {
   background: #1c283d;
+  .skills {
+    background: #a4a4a496;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: min-content;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    h4 {
+      font-family: $font-1;
+      color: white;
+    }
+  }
   .about-main {
     position: relative;
     width: 100%;
@@ -42,28 +66,6 @@
       transition: animate 1s ease-in-out;
       transition: 0.6s ease-in-out;
     }
-    .skills {
-      background: #4c4c4c96;
-      padding: 20px;
-      border-radius: 20px;
-      position: absolute;
-      bottom: 0%;
-      right: 0%;
-      margin: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      width: min-content;
-      & > div {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-      }
-      h4 {
-        font-family: $font-1;
-        color: white;
-      }
-    }
 
     .description-titles {
       display: flex;
@@ -71,7 +73,6 @@
       height: 100%;
       max-width: 25%;
       justify-content: space-between;
-
       gap: 80px;
 
       .aboutDescription {
@@ -79,7 +80,9 @@
         font-size: 1.3rem;
         font-family: $font-2;
         line-height: 25px;
-        background: #f1f1f160;
+        background: #a4a4a496;
+        -webkit-backdrop-filter: blur(1px);
+        backdrop-filter: blur(1px);
         color: #ffffff;
         border-radius: 20px;
         padding: 20px;
@@ -89,7 +92,9 @@
         color: white;
       }
     }
-    @media screen and (max-width: 1210px) {
+  }
+  @media screen and (max-width: 1210px) {
+    .about-main {
       padding: 20px;
       .description-titles {
         max-width: 40%;
@@ -97,23 +102,50 @@
           font-size: 1.8rem;
         }
       }
-      .skills {
-        margin: 20px;
-      }
     }
-    @media screen and (max-width: 800px) {
+    .skills {
+      margin: 20px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .about-main {
       .description-titles {
         max-width: 65%;
         .titles {
-          font-size: 1rem;
+          font-size: 0.8rem;
         }
       }
     }
-    @media screen and (max-width: 980px) {
+    .skills > div {
+      gap: 3px;
+      .progressBar {
+        .barElement {
+          width: 40px;
+        }
+      }
     }
-    @media screen and (max-width: 675px) {
+  }
+  @media screen and (max-width: 550px) {
+    .about-main {
+      .description-titles {
+        max-width: 100%;
+        gap: 0;
+        .aboutDescription {
+          font-size: 1rem;
+          margin: auto 0;
+        }
+      }
+
+      .blob {
+        bottom: 40px;
+        height: 200px;
+        width: 200px;
+        transform: translate(-50%, 50%);
+      }
     }
-    @media screen and (max-width: 675px) {
+    .skills {
+      position: relative;
+      margin: 50px auto;
     }
   }
 }

@@ -32,9 +32,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar" ref={navbarRef} onMouseOut={removeClasses}>
+    <div className="navbar" ref={navbarRef}>
       {pages.map((page) => (
-        <NavLink to={page.path} onMouseOver={play} onClick={playSound}>
+        <NavLink
+          to={page.path}
+          onMouseEnter={play}
+          onClick={playSound}
+          onMouseOut={removeClasses}
+        >
           {page.title}
         </NavLink>
       ))}

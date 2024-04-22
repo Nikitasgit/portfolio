@@ -4,24 +4,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
 const About = () => {
-  function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height,
-    };
-  }
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +35,6 @@ const About = () => {
         <motion.div
           className="blob"
           style={{
-            /*     bottom: !isAtTop && "20px", */
             transform: !isAtTop && "translate(-50%,50%)",
             height: !isAtTop && "200px",
             width: !isAtTop && "200px",

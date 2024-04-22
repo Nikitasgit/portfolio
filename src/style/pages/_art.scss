@@ -1,9 +1,64 @@
+@keyframes cloudMoving {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
+@keyframes cloudMovingTwo {
+  from {
+    transform: translateY(5%);
+  }
+  to {
+    transform: translateY(-7%);
+  }
+}
+@keyframes cloudMovingThree {
+  from {
+    transform: translateY(-2%);
+  }
+  to {
+    transform: translateY(4%);
+  }
+}
+
 .art-page {
+  background: radial-gradient(#a72f6f, #091813);
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 40px;
   padding-top: 40px;
-  background: #ffffff;
+  position: relative;
+  .cloud {
+    pointer-events: none;
+    position: fixed;
+    z-index: 50;
+  }
+  .cloud-one {
+    height: 600px;
+    left: 0%;
+    top: 0%;
+    opacity: 0.7;
+    -webkit-animation: cloudMoving 10s ease-out -2s infinite alternate forwards;
+    animation: cloudMoving 10s ease-out -2s infinite alternate forwards;
+  }
+  .cloud-two {
+    height: 800px;
+    right: 0%;
+    top: 50%;
+    -webkit-animation: cloudMovingTwo 10s ease-out -2s infinite alternate forwards;
+    animation: cloudMovingTwo 10s ease-out -2s infinite alternate forwards;
+  }
+  .cloud-three {
+    height: 400px;
+
+    top: -20%;
+
+    -webkit-animation: cloudMovingThree 10s ease-out -2s infinite alternate forwards;
+    animation: cloudMovingThree 10s ease-out -2s infinite alternate forwards;
+  }
+
   .carousel-gallery-modal {
     position: fixed;
     background: #ffffff34;
@@ -12,7 +67,6 @@
     height: 100svh;
     width: 100%;
     display: flex;
-
     top: 0;
     align-items: center;
     z-index: 3000;
@@ -70,6 +124,7 @@
         cursor: pointer;
       }
       img {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 5px;
         aspect-ratio: 3/4;
         object-fit: cover;
@@ -80,12 +135,24 @@
   }
 
   @media screen and (max-width: 900px) {
+    .cloud-one {
+      height: 400px;
+    }
+    .cloud-two {
+      height: 400px;
+    }
     .container-images {
       max-width: 90%;
     }
   }
 
   @media screen and (max-width: 500px) {
+    .cloud-one,
+    .cloud-two,
+    .cloud-three {
+      height: 280px;
+    }
+
     .container-images {
       max-width: 100%;
       padding: 0 5px;

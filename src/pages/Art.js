@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { IoCloseCircle } from "react-icons/io5";
 import img1 from "../assets/images/gallery/CaptainIannis-1100px.jpg";
 import img2 from "../assets/images/gallery/Greekalley-1100px.jpg";
@@ -21,6 +21,10 @@ import img18 from "../assets/images/gallery/grand-duc.jpg";
 import Footer from "../components/Footer";
 import CarouselGallery from "../components/CarouselGallery";
 
+import cloud1 from "../assets/images/clouds/8918198.png";
+import cloud2 from "../assets/images/clouds/8918206.png";
+import cloud3 from "../assets/images/clouds/8918181.png";
+import { useScroll, useTransform, motion } from "framer-motion";
 const images = [
   img1,
   img2,
@@ -45,7 +49,16 @@ const images = [
 const Art = () => {
   const [modal, setModal] = useState(false);
   const [modifiedArray, setModifiedArray] = useState(images);
-
+  const artPageRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: artPageRef,
+    offset: ["start end", "end start"],
+  });
+  const left = useTransform(scrollYProgress, [0, 1], ["-50%", "100%"]);
+  const right = useTransform(scrollYProgress, [0, 1], ["-50%", "100%"]);
+  const rightOther = useTransform(scrollYProgress, [0, 1], ["-50%", "250%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0px", "-100px"]);
+  const yMore = useTransform(scrollYProgress, [0, 1], ["25%", "15%"]);
   const modifyArray = (array, startIndex) => {
     if (startIndex >= array.length || startIndex < 0) {
       return array;
@@ -59,7 +72,25 @@ const Art = () => {
   };
 
   return (
-    <div className="art-page">
+    <div className="art-page" ref={artPageRef}>
+      <motion.img
+        className="cloud-one cloud"
+        src={cloud1}
+        alt=""
+        style={{ left, y }}
+      />
+      <motion.img
+        className="cloud-two cloud"
+        src={cloud2}
+        alt=""
+        style={{ right, y: yMore }}
+      />
+      <motion.img
+        className="cloud-three cloud"
+        src={cloud3}
+        alt=""
+        style={{ right: rightOther }}
+      />
       {modal && (
         <div className="carousel-gallery-modal">
           <IoCloseCircle

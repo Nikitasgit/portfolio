@@ -1,8 +1,5 @@
 import React, { useRef } from "react";
 import imgMoulinCastaSite from "../assets/images/moulin-casta-site.JPG";
-import imgMagesGameSite from "../assets/images/magesgame-site-2.jpg";
-import imgSample1Site from "../assets/images/sample.jpg";
-import imgSample2Site from "../assets/images/nike-sample.JPG";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
 const HomeSecondPart = () => {

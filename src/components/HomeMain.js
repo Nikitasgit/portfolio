@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import ImgSeashellWhite from "../assets/images/seashell-white.png";
-import imgVictor from "../assets/images/victor-hydra.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import FirstLine from "./lines/FirstLine";
 const HomeMain = () => {
@@ -12,7 +11,6 @@ const HomeMain = () => {
 
   const rotate = useTransform(scrollYProgress, [0, 0.85], [0, 360]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, 1]);
   return (
     <div ref={containerRef} className="home-main">
       <motion.div className="home-main-container" style={{ opacity }}>

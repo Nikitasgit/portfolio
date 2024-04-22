@@ -24,10 +24,9 @@ const Footer = () => {
         </div>
         <div className="contact-text">
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-            consequuntur voluptatum cupiditate harum sed aliquid accusamus ea
-            voluptatem adipisci cumque doloribus optio impedit, aspernatur ut
-            autem saepe consectetur, vero esse!
+            Si vous avez des questions, des idées ou simplement envie de me
+            présenter un projet, n'hésitez pas à me contacter. Merci d'avoir
+            pris le temps de découvrir mon travail !"
           </p>
           <motion.h3
             style={{

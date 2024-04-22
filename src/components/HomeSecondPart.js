@@ -50,68 +50,51 @@ const HomeSecondPart = () => {
         >
           Some projects
         </h2>
-        <div /* style={{ opacity }} */ className="projects-gallery">
-          <div className="prj-wrapper-1">
-            <div className="project">
-              <a
-                href="http://www.moulincasta.fr"
-                className="prj"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={imgMoulinCastaSite} alt="" />
-                <p className="prj-description">
-                  Project for holiday house in France.
-                </p>
-              </a>
-              <h3 className="project-title">Le Moulin Casta</h3>
-              <div>
-                <div className="technologies">
-                  <h4>Technologies:</h4>
-                  <ul className="technologies-list">
-                    <li>React</li>
-                    <li>Node JS, Express</li>
-                    <li>MongoDB</li>
-                    <li>AWS (...,...)</li>
-                  </ul>
-                </div>
-                <p className="project-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Asperiores excepturi, voluptatem nesciunt cumque inventore
-                  fuga ex sint totam, quaerat quo consequuntur atque quidem nisi
-                  reiciendis amet, quasi ut libero nobis debitis reprehenderit
-                  nihil maiores aspernatur possimus. Animi minus non laboriosam
-                  debitis, dolores ab esse, dolore atque molestiae voluptates
-                  omnis magnam error blanditiis harum similique ea veritatis
-                  doloribus, quod dolor voluptatem velit ducimus! Hic voluptate
-                  debitis accusantium expedita repellendus, enim dignissimos
-                  minima commodi natus magni, fugiat culpa eius, pariatur
-                  voluptatem molestias.
-                </p>
-              </div>
-            </div>
+        <div className="projects-gallery">
+          <div className="project">
             <a
-              href="https://nikitasgit.github.io/magesgame/"
-              className="prj"
+              href="http://www.moulincasta.fr"
+              className="prj-img"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={imgMagesGameSite} alt="" />
-              <p className="prj-description">
-                Tic Tac Toe game, Player vs AI mode.
+              <img src={imgMoulinCastaSite} alt="" />
+            </a>
+
+            <div className="project-description">
+              <div className="technologies">
+                <h4>Technologies:</h4>
+                <ul className="technologies-list">
+                  <li>React</li>
+                  <li>Node JS (Express, Cron, Mongoose)</li>
+                  <li>
+                    MongoDB{" "}
+                    <a
+                      className="api-link"
+                      href="http://api.moulincasta.fr/api/v1/accommodations"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      (Lien vers API)
+                    </a>
+                  </li>
+                  <li>AWS (EC2, S3)</li>
+                </ul>
+              </div>
+              <h3 className="project-title">Le Moulin Casta</h3>
+              <p>
+                Site réalisé pour une maison de vacances en Corse, le client
+                peut gérer ses réservations et ses tarifs grace à un calendrier
+                créé "from scratch". En se connectant au site (JWT),
+                l'utilisateur peut modifier les informations (dates, tarif,
+                installations, ...) concernant chaque établissement en location
+                sur le site. Medias stockés sur un AWS bucket S3. Serveur
+                déployé sur grace à AWS EC2. Frontend déployé sur Netlify.
+                L'application a été créé de manière à pouvoir être facilement
+                adaptable à d'autres établissements.
               </p>
-            </a>
+            </div>
           </div>
-          {/*           <div className="prj-wrapper-2">
-            <a className="prj">
-              <img src={imgSample2Site} alt="" />
-              <p className="prj-description">This is a sample website.</p>
-            </a>
-            <a className="prj">
-              <img src={imgSample1Site} alt="" />
-              <p className="prj-description">This is a sample website.</p>
-            </a>
-          </div> */}
         </div>
       </motion.div>
     </div>

@@ -53,7 +53,7 @@ const About = () => {
         <motion.div
           className="blob"
           style={{
-            bottom: !isAtTop && "40px",
+            /*     bottom: !isAtTop && "20px", */
             transform: !isAtTop && "translate(-50%,50%)",
             height: !isAtTop && "200px",
             width: !isAtTop && "200px",

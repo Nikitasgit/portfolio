@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import soundHover from "../assets/sounds/sound-2.wav";
 import { NavLink, useLocation } from "react-router-dom";
 const Navbar = () => {
@@ -23,6 +23,9 @@ const Navbar = () => {
       }
     });
   };
+  useEffect(() => {
+    removeClasses();
+  }, []);
   let play = (event) => {
     let children = Array.from(navbarRef.current.children);
     children.forEach((child) => {

@@ -1,7 +1,7 @@
 import HomeMain from "../components/HomeMain";
 import HomeSecondPart from "../components/HomeSecondPart";
+import HomeThirdPart from "../components/HomeThirdPart";
 import HomeFourthPart from "../components/HomeFourthPart";
-import HomeFifthPart from "../components/HomeFifthPart";
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -9,8 +9,8 @@ const Home = () => {
     <div className="home">
       <HomeMain />
       <HomeSecondPart />
+      <HomeThirdPart />
       <HomeFourthPart />
-      <HomeFifthPart />
       <Footer />
     </div>
   );

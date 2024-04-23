@@ -1,115 +1,80 @@
-import React, { useRef, useState } from "react";
-import img1 from "../assets/images/gallery/Asiankid-1100px.jpg";
-import img2 from "../assets/images/gallery//Octophant-1100px.jpg";
-import img3 from "../assets/images/gallery/Marin-1100px.jpg";
-import img4 from "../assets/images/gallery/Captainwoman-1100px.jpg";
-import img5 from "../assets/images/gallery/DSC01683_1.jpg";
-import img6 from "../assets/images/gallery/Greekalley-1100px.jpg";
-import img7 from "../assets/images/gallery/Sumo-1100px.jpg";
-import img8 from "../assets/images/gallery/Christmasball-1100px.jpg";
-import img9 from "../assets/images/gallery/Lion-1100px.jpg";
-import pencilImg from "../assets/images/pencik.png";
-import {
-  motion,
-  useAnimationControls,
-  useInView,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
-const HomeThirdPart = () => {
+import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+
+function Item({ props }) {
   const ref = useRef(null);
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["end end", "end start"],
   });
-  const imagesArray = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
-  const svgPath = useSpring(useTransform(scrollYProgress, [-0.3, 0.5], [0, 1]));
-  const controls = useAnimationControls();
-  const [images, setImages] = useState([img1]);
-  const [counter, setCounter] = useState(1);
-  const title = useRef(null);
-  const isInView = useInView(title, { once: true });
-  const handleClick = () => {
-    setCounter(counter + 1);
-    counter < imagesArray.length
-      ? setImages([...images, imagesArray[counter]])
-      : setDisplayText(true);
-
-    controls.start("animate");
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.2, 1, 0.2]);
+  const filter = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 1],
+    ["blur(10px)", "blur(0px)", "blur(0px)", "blur(10px)"]
+  );
+  const assignFontSize = () => {
+    if (windowDimensions.width < 400) {
+      return ["1.2rem", "2rem", "1.8rem", "1.2rem"];
+    }
+    if (windowDimensions.width < 500) {
+      return ["1.7rem", "2.8rem", "2.2rem", "1.7rem"];
+    }
+    if (windowDimensions.width < 650) {
+      return ["2.2rem", "3.5rem", "2.8rem", "2.2rem"];
+    }
+    if (windowDimensions.width < 750) {
+      return ["3.2rem", "4.5rem", "3.8rem", "3.2rem"];
+    }
+    if (windowDimensions.width < 1250) {
+      return ["4rem", "5.3rem", "4.5rem", "4rem"];
+    } else {
+      return ["7rem", "9rem", "8rem", "7rem"];
+    }
   };
-  const [displayText, setDisplayText] = useState(false);
-  return (
-    <div className="main-third-part" ref={ref}>
-      <h3
-        ref={title}
-        style={{
-          transform: isInView ? "none" : "translateX(-300px)",
-          opacity: isInView ? 1 : 0,
-          transition: "1s  0.5s",
-        }}
-      >
-        Grab the pencil!
-      </h3>
-      {displayText && (
-        <motion.div
-          initial={{ left: "200%", opacity: 0 }}
-          animate={{
-            left: "50%",
-            opacity: 1,
-          }}
-          transition={{ duration: 1, delay: 0.1, ease: "backInOut" }}
-          className="display-text"
-        >
-          <h5>
-            When I draw or code, I find joy in dedicating time to perfecting the
-            details, regardless of how long it takes.
-          </h5>
-          <motion.button whileHover={{ scale: 1.05 }}>
-            to the gallery
-          </motion.button>
-        </motion.div>
-      )}
+  const fontSize = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 1],
+    assignFontSize()
+  );
 
-      <div className="imgs-container">
-        {images.map((img, index) => (
-          <motion.img
-            variants={{
-              initial: {
-                x: 3000,
-                opacity: 0,
-                rotate: 0,
-              },
-              animate: {
-                x: 0,
-                opacity: 1,
-                rotate: index % 2 == 0 ? `${index * 3}deg` : `-${index * 2}deg`,
-              },
-            }}
-            initial="initial"
-            animate={controls}
-            src={img}
-            key={index}
-            style={{
-              zIndex: index,
-              left: `${index * 9}%`,
-              rotate: `${Math.floor(Math.random() * (11 - -11 + 1) + -11)}deg`,
-            }}
-            alt=""
-          />
-        ))}
-      </div>
-      <motion.img
-        className="pencil"
-        src={pencilImg}
-        alt=""
-        drag
-        dragConstraints={ref}
-        onClick={handleClick}
-      />
-      {/*   <button className="button-third-part" onClick={handleClick}>
-        Click it!
-      </button> */}
+  function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height,
+    };
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return (
+    <div ref={ref}>
+      <motion.li style={{ opacity, filter, fontSize }}>{props}</motion.li>
+    </div>
+  );
+}
+const HomeThirdPart = () => {
+  return (
+    <div className="main-fourth-part">
+      <ul className="list">
+        <Item props="Detail-Oriented" />
+        <Item props="Proactive" />
+        <Item props="Adaptable" />
+        <Item props="Punctual" />
+        <Item props="Curious" />
+        <Item props="Client-Focused" />
+        <Item props="Team Player" />
+        <Item props="Communicative" />
+      </ul>
     </div>
   );
 };

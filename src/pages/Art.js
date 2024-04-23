@@ -19,7 +19,7 @@ import img16 from "../assets/images/gallery/Oldwoman.jpg";
 import img17 from "../assets/images/gallery/veillard.jpg";
 import img18 from "../assets/images/gallery/grand-duc.jpg";
 import Footer from "../components/Footer";
-import CarouselGallery from "../components/CarouselGallery";
+import ImgSliderGallery from "../components/ImgSliderGallery";
 
 import cloud1 from "../assets/images/clouds/8918198.png";
 import cloud2 from "../assets/images/clouds/8918206.png";
@@ -97,7 +97,7 @@ const Art = () => {
             className="close-modal-icon"
             onClick={() => setModal(false)}
           />
-          <CarouselGallery imgs={modifiedArray} />
+          <ImgSliderGallery imgs={modifiedArray} />
         </div>
       )}
 

@@ -4,9 +4,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-/* import { useEffect, useState } from "react"; */
 
-const CarouselGallery = ({ imgs }) => {
+const ImgSliderGallery = ({ imgs }) => {
   return (
     <Swiper
       className="carousel"
@@ -28,4 +27,4 @@ const CarouselGallery = ({ imgs }) => {
     </Swiper>
   );
 };
-export default CarouselGallery;
+export default ImgSliderGallery;

@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import imgMoulinCastaSite from "../assets/images/moulin-casta-site.JPG";
+import yogaSite from "../assets/images/yoga-site.JPG";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
 const HomeSecondPart = () => {
@@ -62,10 +63,16 @@ const HomeSecondPart = () => {
               <div className="technologies">
                 <h4>Technologies:</h4>
                 <ul className="technologies-list">
-                  <li>React</li>
-                  <li>Node JS (Express, Cron, Mongoose)</li>
                   <li>
-                    MongoDB{" "}
+                    React JS (React router DOM, Redux Toolkit, Framer Motion,
+                    Sass, Leaflet, Axios, date-fns)
+                  </li>
+                  <li>
+                    Node JS (Express, Cron, Mongoose, Multer, Helmet, Dotenv,
+                    Nodemon, JWT)
+                  </li>
+                  <li>
+                    MongoDB
                     <a
                       className="api-link"
                       href="http://api.moulincasta.fr/api/v1/accommodations"
@@ -80,16 +87,38 @@ const HomeSecondPart = () => {
               </div>
               <h3 className="project-title">Le Moulin Casta</h3>
               <p>
-                Site réalisé pour une maison de vacances en Corse, le client
-                peut gérer ses réservations et ses tarifs grace à un calendrier
-                créé "from scratch". En se connectant au site (JWT),
-                l'utilisateur peut modifier les informations (dates, tarif,
-                installations, ...) concernant chaque établissement en location
-                sur le site. Medias stockés sur un AWS bucket S3. Serveur
-                déployé sur grace à AWS EC2. Frontend déployé sur Netlify.
-                L'application a été créé de manière à pouvoir être facilement
-                adaptable à d'autres établissements.
+                Website created for a vacation home in Corsica, where the client
+                can manage reservations and prices using a custom-built
+                calendar. By logging into the site (JWT), the user can modify
+                information (dates, prices, amenities, etc.) for each rental
+                property listed on the site. Media is stored on an AWS S3
+                bucket. The server is deployed on AWS EC2 (Ubuntu). The frontend
+                is deployed on Netlify. The application has been designed to be
+                easily adaptable to other properties.
               </p>
+            </div>
+          </div>
+          <div className="project">
+            <a
+              href="https://ioannastavropoulou.netlify.app/"
+              className="prj-img"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={yogaSite} alt="" />
+            </a>
+
+            <div className="project-description">
+              <div className="technologies">
+                <h4>Technologies:</h4>
+                <ul className="technologies-list">
+                  <li>React js (Framer Motion)</li>
+                  <li>HTML, SASS</li>
+                  <li>AWS (S3)</li>
+                </ul>
+              </div>
+              <h3 className="project-title">Yoga Courses</h3>
+              <p>Site for a yoga teacher in Greece.</p>
             </div>
           </div>
         </div>

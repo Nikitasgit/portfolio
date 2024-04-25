@@ -12,12 +12,10 @@
     width: 100%;
     .main-img-container {
       max-height: 600px;
-
       position: absolute;
 
-      /*       z-index: -1; */
       top: 10%;
-      /*       transform: translateY(-50%); */
+
       left: 0%;
       background: #ffffff1b;
       width: 100%;
@@ -36,9 +34,7 @@
     }
     .home-main-container {
       display: flex;
-      /*       .img-victor {
-        align-self: flex-start;
-      } */
+
       img {
         width: 100%;
       }
@@ -130,14 +126,19 @@
     position: relative;
     padding: 50px 50px 200px;
     text-align: center;
-    .project {
+    .projects-gallery {
       display: flex;
-      gap: 40px;
-      color: white;
-      margin: 0 auto;
+      flex-direction: column;
+      gap: 70px;
+      .project {
+        display: flex;
+        gap: 20px;
+        color: white;
+        margin: 0 auto;
+      }
     }
     .prj-img {
-      margin: auto auto;
+      margin: 0 auto;
       width: 50%;
 
       img {

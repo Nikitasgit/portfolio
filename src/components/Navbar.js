@@ -25,7 +25,7 @@ const Navbar = () => {
   };
   useEffect(() => {
     removeClasses();
-  }, []);
+  }, [removeClasses]);
   let play = (event) => {
     let children = Array.from(navbarRef.current.children);
     children.forEach((child) => {

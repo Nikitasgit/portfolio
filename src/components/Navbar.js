@@ -12,7 +12,7 @@ const Navbar = () => {
   let playSound = () => {
     new Audio(soundHover).play();
   };
-  let removeClasses = () => {
+  const removeClasses = useCallback(() => {
     let children = Array.from(navbarRef.current.children);
     children.forEach((child) => {
       child.classList.remove("on-page");
@@ -22,7 +22,7 @@ const Navbar = () => {
         child.classList.add("on-page");
       }
     });
-  };
+  }, [location.pathname]);
   useEffect(() => {
     removeClasses();
   }, [removeClasses]);
@@ -39,6 +39,7 @@ const Navbar = () => {
       {pages.map((page) => (
         <NavLink
           to={page.path}
+          key={page.path}
           onMouseEnter={play}
           onClick={playSound}
           onMouseOut={removeClasses}

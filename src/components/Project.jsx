@@ -12,12 +12,7 @@ const Project = ({
 }) => {
   return (
     <div className="project">
-      <a
-        href={url}
-        className="prj-img"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={url} className="prj-img" target="_blank" rel="noreferrer">
         <img src={img} alt="" />
       </a>
 
@@ -47,13 +42,9 @@ const Project = ({
               <div className="technologies-group">
                 <h5>Back-end:</h5>
                 <ul>
-                  {backendTech.map((techno, index) =>
-                    index != backendTech.length - 1 ? (
-                      <li key={index}>{techno} - </li>
-                    ) : (
-                      <li key={index}>{techno} </li>
-                    )
-                  )}
+                  {backendTech.map((techno, index) => (
+                    <li key={index}>{techno}</li>
+                  ))}
                 </ul>
               </div>
             ) : null}
@@ -61,13 +52,9 @@ const Project = ({
               <div className="technologies-group">
                 <h5>Deployement:</h5>
                 <ul>
-                  {deployTech.map((techno, index) =>
-                    index != deployTech.length - 1 ? (
-                      <li key={index}>{techno + " -"}</li>
-                    ) : (
-                      <li key={index}>{techno} </li>
-                    )
-                  )}
+                  {deployTech.map((techno, index) => (
+                    <li key={index}>{techno}</li>
+                  ))}
                 </ul>
               </div>
             ) : null}
@@ -75,13 +62,9 @@ const Project = ({
               <div className="technologies-group">
                 <h5>Stockage:</h5>
                 <ul>
-                  {stockageTech.map((techno, index) =>
-                    index != stockageTech.length - 1 ? (
-                      <li key={index}>{techno} - </li>
-                    ) : (
-                      <li key={index}>{techno} </li>
-                    )
-                  )}
+                  {stockageTech.map((techno, index) => (
+                    <li key={index}>{techno}</li>
+                  ))}
                 </ul>
               </div>
             ) : null}

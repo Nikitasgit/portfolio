@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-import imgMoulinCastaSite from "../assets/images/moulin-casta-site.JPG";
-import yogaSite from "../assets/images/yoga-site.JPG";
+
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { projects } from "../data/data";
 import Project from "./Project";

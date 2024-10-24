@@ -20,7 +20,7 @@ const Project = ({
         <h3 className="project-title">
           {title}
           <p>
-            <a href={url} target="_blank">
+            <a href={url} target="_blank" rel="noreferrer">
               ({url})
             </a>
           </p>

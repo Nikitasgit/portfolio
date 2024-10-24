@@ -20,11 +20,12 @@ const HomeFourthPart = () => {
     <div className="main-fifth-part" ref={ref}>
       <motion.div className="text-scrolling">
         <motion.p style={{ x: xOpposite }}>
-          When I immerse myself in the creative process, whether sketching or
-          coding, I derive immense satisfaction from meticulously refining every
-          detail, investing the necessary time to achieve excellence.
+          Lorsque je m'immerge dans le processus créatif, que ce soit en
+          esquissant ou en codant, je tire une immense satisfaction à affiner
+          méticuleusement chaque détail, en investissant le temps nécessaire
+          pour atteindre l'excellence.
         </motion.p>
-        <motion.h2 style={{ x }}>Linocut and Pencil drawing</motion.h2>
+        <motion.h2 style={{ x }}>Artiste, illustrateur</motion.h2>
       </motion.div>
       <div className="images-wrapper">
         <div className="img-container">

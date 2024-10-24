@@ -4,8 +4,8 @@ import { NavLink, useLocation } from "react-router-dom";
 const Navbar = () => {
   const pages = [
     { path: "/", title: "Home" },
-    { path: "/art", title: "Gallery" },
-    { path: "/about", title: "About" },
+    { path: "/art", title: "Illustrations" },
+    { path: "/about", title: "À propos" },
   ];
   const navbarRef = useRef(null);
   const location = useLocation();

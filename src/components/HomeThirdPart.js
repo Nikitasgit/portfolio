@@ -31,7 +31,7 @@ function Item({ props }) {
     if (windowDimensions.width < 1250) {
       return ["4rem", "5.3rem", "4.5rem", "4rem"];
     } else {
-      return ["7rem", "9rem", "8rem", "7rem"];
+      return ["5rem", "7rem", "6rem", "5rem"];
     }
   };
   const fontSize = useTransform(
@@ -66,14 +66,15 @@ const HomeThirdPart = () => {
   return (
     <div className="main-fourth-part">
       <ul className="list">
-        <Item props="Detail-Oriented" />
-        <Item props="Proactive" />
+        <Item props="Communicatif" />
+        <Item props="Passionné" />
+        <Item props="Minutieux" />
+        <Item props="Créatif" />
+        <Item props="Ponctuel" />
+        <Item props="Curieux" />
         <Item props="Adaptable" />
-        <Item props="Punctual" />
-        <Item props="Curious" />
-        <Item props="Client-Focused" />
-        <Item props="Team Player" />
-        <Item props="Communicative" />
+        <Item props="Collaboratif" />
+        <Item props="Organisé" />
       </ul>
     </div>
   );

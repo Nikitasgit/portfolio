@@ -20,9 +20,9 @@ const HomeMain = () => {
         <div className="text-home-main">
           <div className="text-container">
             <h2>Creative,</h2>
-            <h1>Front-End</h1>
+            <h1>Web</h1>
             <div className="developer">
-              <h1 style={{ zIndex: 3 }}>devel</h1>
+              <h1 style={{ zIndex: 3 }}>Devel</h1>
               <motion.img
                 style={{ rotate }}
                 className="img-seashell-white"

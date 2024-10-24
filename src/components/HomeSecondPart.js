@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import imgMoulinCastaSite from "../assets/images/moulin-casta-site.JPG";
 import yogaSite from "../assets/images/yoga-site.JPG";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-
+import { projects } from "../data/data";
+import Project from "./Project";
 const HomeSecondPart = () => {
   const containerRef = useRef(null);
   const title = useRef(null);
@@ -14,6 +15,7 @@ const HomeSecondPart = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const svgPath = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+
   return (
     <div className="main-second-part" ref={containerRef}>
       <div
@@ -49,78 +51,18 @@ const HomeSecondPart = () => {
           Some projects
         </h2>
         <div className="projects-gallery">
-          <div className="project">
-            <a
-              href="http://www.moulincasta.fr"
-              className="prj-img"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={imgMoulinCastaSite} alt="" />
-            </a>
-
-            <div className="project-description">
-              <div className="technologies">
-                <h4>Technologies:</h4>
-                <ul className="technologies-list">
-                  <li>
-                    React JS (React router DOM, Redux Toolkit, Framer Motion,
-                    Sass, Leaflet, Axios, date-fns)
-                  </li>
-                  <li>
-                    Node JS (Express, Cron, Mongoose, Multer, Helmet, Dotenv,
-                    Nodemon, JWT)
-                  </li>
-                  <li>
-                    MongoDB
-                    <a
-                      className="api-link"
-                      href="http://api.moulincasta.fr/api/v1/accommodations"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      (Lien vers API)
-                    </a>
-                  </li>
-                  <li>AWS (EC2, S3)</li>
-                </ul>
-              </div>
-              <h3 className="project-title">Le Moulin Casta</h3>
-              <p>
-                Website created for a vacation home in Corsica, where the client
-                can manage reservations and prices using a custom-built
-                calendar. By logging into the site (JWT), the user can modify
-                information (dates, prices, amenities, etc.) for each rental
-                property listed on the site. Media is stored on an AWS S3
-                bucket. The server is deployed on AWS EC2 (Ubuntu). The frontend
-                is deployed on Netlify. The application has been designed to be
-                easily adaptable to other properties.
-              </p>
-            </div>
-          </div>
-          <div className="project">
-            <a
-              href="https://ioannastavropoulou.netlify.app/"
-              className="prj-img"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={yogaSite} alt="" />
-            </a>
-
-            <div className="project-description">
-              <div className="technologies">
-                <h4>Technologies:</h4>
-                <ul className="technologies-list">
-                  <li>React js (Framer Motion)</li>
-                  <li>HTML, SASS</li>
-                  <li>AWS (S3)</li>
-                </ul>
-              </div>
-              <h3 className="project-title">Yoga Courses</h3>
-              <p>Site for a yoga teacher in Greece.</p>
-            </div>
-          </div>
+          {projects.map((project) => (
+            <Project
+              url={project.url}
+              description={project.description}
+              img={project.img}
+              title={project.title}
+              frontendTech={project.frontendTech}
+              backendTech={project.backendTech}
+              deployTech={project.deployTech}
+              stockageTech={project.stockageTech}
+            />
+          ))}
         </div>
       </motion.div>
     </div>

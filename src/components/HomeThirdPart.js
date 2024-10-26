@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { IoLogoHtml5 } from "react-icons/io";
 
 function Item({ props }) {
   const ref = useRef(null);

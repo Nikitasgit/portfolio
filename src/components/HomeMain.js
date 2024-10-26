@@ -17,9 +17,7 @@ const HomeMain = () => {
     offset: ["end end", "end start"],
   });
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const mouseOverIcon = (e) => {
-    console.log(e.target);
-  };
+
   return (
     <div ref={containerRef} className="home-main">
       <motion.div className="home-main-container" style={{ opacity }}>

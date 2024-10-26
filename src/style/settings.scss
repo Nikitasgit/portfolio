@@ -65,16 +65,12 @@ p {
     }
   }
 }
-.montain-line-container {
+.victor-line-container {
   z-index: 1000;
   position: absolute;
-  height: 100vh;
-  left: 0%;
-  top: -40%;
+  left: -5%;
+  top: -50%;
 
-  svg {
-    height: 130vh;
-  }
   @media screen and (max-width: 815px) {
     left: -8%;
     top: -40%;
@@ -97,15 +93,7 @@ p {
     }
   }
 }
-/* .shadow {
-  position: fixed;
-  top: 0vh;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  background: radial-gradient(#024d5a, #091813);
-} */
+
 html.lenis {
   height: auto;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const FirstLine = () => {
   return (
-    <div className="montain-line-container">
+    <div className="victor-line-container">
       <svg
         width="535"
         height="1005"

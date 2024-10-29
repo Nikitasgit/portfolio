@@ -66,13 +66,11 @@
           position: relative;
           white-space: nowrap;
           padding: 20px 0;
-          background: #ffffff55;
+
           -webkit-box-shadow: 0px -8px 24px -6px rgba(0, 0, 0, 0.1);
           -moz-box-shadow: 0px -8px 24px -6px rgba(0, 0, 0, 0.1);
           box-shadow: 0px -8px 24px -6px rgba(0, 0, 0, 0.1);
-          &:hover .logos-slide {
-            animation-play-state: paused;
-          }
+
           &::before {
             position: absolute;
             content: "";
@@ -94,25 +92,21 @@
             height: 100%;
             top: 0;
             right: 0;
-            background: linear-gradient(
+            /*      background: linear-gradient(
               to right,
               rgba(255, 255, 255, 0),
-              #ffffff2a
-            );
+              #ffffff0f
+            ); */
             z-index: 30;
           }
           .logos-slide {
             display: inline-block;
-            animation: 40s slide infinite linear;
+            animation: 90s slide infinite linear;
             .logos-slide-item {
               z-index: 1000;
               font-size: 3rem;
               margin: 0 50px;
               transition: 0.3s;
-              cursor: pointer;
-            }
-            .logos-slide-item:hover {
-              scale: 1.3;
             }
           }
         }

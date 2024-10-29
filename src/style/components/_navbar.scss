@@ -21,12 +21,12 @@
     &:hover::after {
       position: absolute;
       content: "";
-      background: white;
+      background: #ffffff74;
 
       height: 0.1rem;
       transform: translateY(50%);
-      width: 110%;
-      left: -5%;
+      width: 105%;
+      right: 0%;
       border-radius: 500px;
     }
     &:hover {
@@ -35,16 +35,16 @@
     }
   }
   .on-page {
-    color: #fdc178;
+    color: #ffffff45;
     &::after {
       position: absolute;
       content: "";
-      background: #f8f8f8;
+      background: #ffffff74;
       height: 0.1rem;
       transform: translateY(50%);
       bottom: 46%;
-      width: 110%;
-      left: -5%;
+      width: 105%;
+      right: 0%;
       border-radius: 500px;
     }
   }

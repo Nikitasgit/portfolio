@@ -50,8 +50,10 @@ const HomeSecondPart = () => {
           Some projects
         </h2>
         <div className="projects-gallery">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <Project
+              key={index}
+              style={index % 2 == !0 ? { flexDirection: "row-reverse" } : {}}
               url={project.url}
               description={project.description}
               img={project.img}

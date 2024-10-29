@@ -1,8 +1,6 @@
 .footer-container {
   display: flex;
-
   align-items: flex-end;
-
   .footer {
     padding: 220px 50px 50px;
     justify-content: space-between;
@@ -10,7 +8,7 @@
     width: 100%;
     display: flex;
     position: relative;
-    color: $color-1;
+    color: $color-3;
     gap: 30px;
     .line-footer {
       position: absolute;
@@ -27,6 +25,13 @@
       font-family: $font-2;
       font-size: 1.2rem;
     }
+    .main-footer {
+      display: flex;
+      justify-content: space-between;
+      max-width: 80%;
+      margin: 0 auto;
+      align-items: center;
+    }
     .contact-text {
       justify-content: center;
       align-items: flex-start;
@@ -40,8 +45,8 @@
       }
     }
     .contact-img-container {
-      max-width: 300px;
-      min-width: 120px;
+      max-width: 200px;
+      min-width: 20px;
       display: flex;
       justify-content: center;
       align-items: center;

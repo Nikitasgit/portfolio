@@ -15,7 +15,7 @@ const HomeMain = () => {
     target: containerRef,
     offset: ["end end", "end start"],
   });
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
     <div ref={containerRef} className="home-main">

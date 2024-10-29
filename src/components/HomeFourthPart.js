@@ -29,12 +29,6 @@ const HomeFourthPart = () => {
       </motion.div>
       <div className="images-wrapper">
         <div className="img-container">
-          <img src={ImgSquidPng} alt="" />
-        </div>
-        <div className="img-container" style={{ zIndex: 0 }}>
-          <img src={ImgBirdPng} alt="" />
-        </div>
-        <div className="img-container">
           <img src={ImgCaptain} alt="" />
         </div>
         <div className="img-container" style={{ zIndex: 0 }}>
@@ -43,7 +37,12 @@ const HomeFourthPart = () => {
         <div className="img-container">
           <img src={ImgMarin} alt="" />
         </div>
-
+        <div className="img-container">
+          <img src={ImgSquidPng} alt="" />
+        </div>
+        <div className="img-container" style={{ zIndex: 0 }}>
+          <img src={ImgBirdPng} alt="" />
+        </div>
         <div
           className="img-container"
           style={{

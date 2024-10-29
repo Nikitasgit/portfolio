@@ -1,0 +1,40 @@
+.imgs-bg {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  position: fixed;
+  img {
+    position: absolute;
+  }
+  .squid {
+    max-height: 90vh;
+    max-height: 90svh;
+    right: 0%;
+    opacity: 15%;
+    transform: rotate(-20deg);
+    top: 0%;
+  }
+  .huppe {
+    max-height: 80vh;
+    max-height: 80svh;
+    left: -15%;
+    opacity: 5%;
+    transform: rotate(10deg);
+    top: 0%;
+  }
+  @media screen and (max-width: 950px) {
+    .squid,
+    .huppe {
+      max-height: 70vh;
+      max-height: 70svh;
+    }
+    .squid {
+      top: 20%;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .squid {
+      display: none;
+    }
+  }
+}

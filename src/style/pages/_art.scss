@@ -1,4 +1,4 @@
-@keyframes cloudMoving {
+/* @keyframes cloudMoving {
   from {
     transform: translateY(-10%);
   }
@@ -21,10 +21,12 @@
   to {
     transform: translateY(4%);
   }
-}
+} */
 
 .art-page {
-  background: radial-gradient(#a72f6f, #091813);
+  background: #136a8a;
+  background: -webkit-linear-gradient(to right, #267871, #136a8a);
+  background: linear-gradient(to right, #267871, #136a8a);
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -40,23 +42,23 @@
     left: 0%;
     top: 0%;
     opacity: 0.7;
-    -webkit-animation: cloudMoving 10s ease-out -2s infinite alternate forwards;
-    animation: cloudMoving 10s ease-out -2s infinite alternate forwards;
+    /*     -webkit-animation: cloudMoving 10s ease-out -2s infinite alternate forwards;
+    animation: cloudMoving 10s ease-out -2s infinite alternate forwards; */
   }
   .cloud-two {
     height: 800px;
     right: 0%;
     top: 50%;
-    -webkit-animation: cloudMovingTwo 10s ease-out -2s infinite alternate forwards;
-    animation: cloudMovingTwo 10s ease-out -2s infinite alternate forwards;
+    /*    -webkit-animation: cloudMovingTwo 10s ease-out -2s infinite alternate forwards;
+    animation: cloudMovingTwo 10s ease-out -2s infinite alternate forwards; */
   }
   .cloud-three {
     height: 400px;
 
     top: -20%;
 
-    -webkit-animation: cloudMovingThree 10s ease-out -2s infinite alternate forwards;
-    animation: cloudMovingThree 10s ease-out -2s infinite alternate forwards;
+    /*     -webkit-animation: cloudMovingThree 10s ease-out -2s infinite alternate forwards;
+    animation: cloudMovingThree 10s ease-out -2s infinite alternate forwards; */
   }
 
   .carousel-gallery-modal {

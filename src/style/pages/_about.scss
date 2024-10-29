@@ -16,7 +16,9 @@
   }
 }
 .about-page {
-  background: radial-gradient(#a72f2f, #091813);
+  background: #136a8a;
+  background: -webkit-linear-gradient(to right, #267871, #136a8a);
+  background: linear-gradient(to right, #267871, #136a8a);
   .skills {
     background: #a4a4a496;
     -webkit-backdrop-filter: blur(1px);

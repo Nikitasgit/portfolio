@@ -17,7 +17,7 @@ const Projects = () => {
     offset: ["start end", "end start"],
   });
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const svgPath = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
   return (

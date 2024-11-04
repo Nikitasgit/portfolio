@@ -14,7 +14,7 @@ const Project = ({
   return (
     <div className={index % 2 !== 0 ? "project-card-even" : "project-card"}>
       <a href={url} className="img-container" target="_blank" rel="noreferrer">
-        <img src={img} alt="project image" />
+        <img src={img} alt="project" />
       </a>
 
       <div className="project-card-text">

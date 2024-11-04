@@ -18,7 +18,7 @@ import img15 from "../assets/images/gallery/Donkey.jpg";
 import img16 from "../assets/images/gallery/Oldwoman.jpg";
 import img17 from "../assets/images/gallery/veillard.jpg";
 import img18 from "../assets/images/gallery/grand-duc.jpg";
-import Footer from "../components/Footer";
+
 import ImgSliderGallery from "../components/ImgSliderGallery";
 
 import cloud1 from "../assets/images/clouds/8918198.png";

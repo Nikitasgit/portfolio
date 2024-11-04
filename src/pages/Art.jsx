@@ -24,7 +24,7 @@ import ImgSliderGallery from "../components/ImgSliderGallery";
 import cloud1 from "../assets/images/clouds/8918198.png";
 import cloud2 from "../assets/images/clouds/8918206.png";
 import cloud3 from "../assets/images/clouds/8918181.png"; */
-import { useScroll, useTransform /*  motion */ } from "framer-motion";
+/* import { useScroll, useTransform , motion  } from "framer-motion"; */
 const images = [
   img1,
   img2,
@@ -50,10 +50,10 @@ const Art = () => {
   const [modal, setModal] = useState(false);
   const [modifiedArray, setModifiedArray] = useState(images);
   const artPageRef = useRef(null);
-  const { scrollYProgress } = useScroll({
+  /*   const { scrollYProgress } = useScroll({
     target: artPageRef,
     offset: ["start end", "end start"],
-  });
+  }); */
   /*   const left = useTransform(scrollYProgress, [0, 1], ["-50%", "100%"]);
   const right = useTransform(scrollYProgress, [0, 1], ["-50%", "100%"]);
   const rightOther = useTransform(scrollYProgress, [0, 1], ["-50%", "250%"]);

@@ -20,11 +20,11 @@ import img17 from "../assets/images/gallery/veillard.jpg";
 import img18 from "../assets/images/gallery/grand-duc.jpg";
 
 import ImgSliderGallery from "../components/ImgSliderGallery";
-
+/* 
 import cloud1 from "../assets/images/clouds/8918198.png";
 import cloud2 from "../assets/images/clouds/8918206.png";
-import cloud3 from "../assets/images/clouds/8918181.png";
-import { useScroll, useTransform, motion } from "framer-motion";
+import cloud3 from "../assets/images/clouds/8918181.png"; */
+import { useScroll, useTransform /*  motion */ } from "framer-motion";
 const images = [
   img1,
   img2,
@@ -54,11 +54,11 @@ const Art = () => {
     target: artPageRef,
     offset: ["start end", "end start"],
   });
-  const left = useTransform(scrollYProgress, [0, 1], ["-50%", "100%"]);
+  /*   const left = useTransform(scrollYProgress, [0, 1], ["-50%", "100%"]);
   const right = useTransform(scrollYProgress, [0, 1], ["-50%", "100%"]);
   const rightOther = useTransform(scrollYProgress, [0, 1], ["-50%", "250%"]);
   const y = useTransform(scrollYProgress, [0, 1], ["0px", "-100px"]);
-  const yMore = useTransform(scrollYProgress, [0, 1], ["25%", "15%"]);
+  const yMore = useTransform(scrollYProgress, [0, 1], ["25%", "15%"]); */
   const modifyArray = (array, startIndex) => {
     if (startIndex >= array.length || startIndex < 0) {
       return array;

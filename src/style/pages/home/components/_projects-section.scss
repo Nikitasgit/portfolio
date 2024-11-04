@@ -1,0 +1,196 @@
+.projects-section {
+  margin: 170px 0;
+  .projects-header {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    .sailing-svg {
+      -webkit-filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.913));
+      filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      min-height: 85px;
+      min-width: 100vw;
+    }
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      letter-spacing: 0.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $color-4;
+    }
+  }
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 60px;
+    .project-card,
+    .project-card-even {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      .img-container {
+        min-width: 50%;
+        img {
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+          width: 100%;
+          height: 100%;
+          max-width: 800px;
+          border-radius: 5px;
+          aspect-ratio: 9/6;
+          object-fit: cover;
+          object-position: top left;
+          transition: 0.4s;
+        }
+      }
+    }
+    .project-card-even {
+      flex-direction: row-reverse;
+      .project-card-text {
+        justify-content: end;
+        text-align: end;
+      }
+      .technologies-group ul {
+        justify-content: flex-end;
+      }
+    }
+    .project-card-text {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      .project-title {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+      }
+      a {
+        color: $color-3;
+        font-size: 1rem;
+      }
+      p {
+        letter-spacing: 0.05rem;
+      }
+
+      .technologies-container {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        h5 {
+          font-size: 1rem;
+          font-weight: 600;
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+        }
+        .technologies-group {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            li {
+              padding: 3px 5px;
+              border-radius: 5px;
+              letter-spacing: 0.07rem;
+              font-weight: 500;
+              color: $color-4;
+              border: 0.05rem solid $color-4;
+              backdrop-filter: blur(3px);
+              background: #ffffff1b;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .projects-header {
+      .sailing-svg {
+        left: -15%;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    margin: 120px 0;
+    .projects-header {
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .projects-header {
+      .sailing-svg {
+        left: -15%;
+      }
+      h2 {
+        font-size: 2.4rem;
+      }
+    }
+    .project-card,
+    .project-card-even {
+      flex-direction: column !important;
+    }
+    .project-card-even {
+      .project-card-text {
+        text-align: inherit !important;
+      }
+      .technologies-group ul {
+        justify-content: flex-start !important;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .projects-header {
+      .sailing-svg {
+        left: -20%;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+    .projects-container {
+      padding: 0;
+      .project-card,
+      .project-card-even {
+        .img-container {
+          img {
+            border-radius: 0 !important;
+          }
+        }
+        .project-card-text {
+          padding: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 460px) {
+    margin: 70px 0;
+    .projects-header {
+      h2 {
+        font-size: 1.7rem;
+        letter-spacing: 0.01rem;
+      }
+      .sailing-svg {
+        left: -28%;
+      }
+    }
+    .project-card,
+    .project-card-even {
+      gap: 0px !important;
+      .img-container {
+        img {
+          border-radius: 0 !important;
+        }
+      }
+      .project-card-text {
+        padding: 20px;
+      }
+    }
+  }
+}

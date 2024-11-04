@@ -1,0 +1,113 @@
+.hero {
+  padding-top: 50px;
+  height: 100vh;
+  height: 100svh;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .hero-main-text {
+    margin: auto 20px auto auto;
+    width: min-content;
+    text-align: end;
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+
+    h1 {
+      font-weight: 800;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      color: $color-4;
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 5rem;
+      white-space: nowrap;
+      letter-spacing: 0.3rem;
+      color: #dbdbdb;
+    }
+    h4 {
+      letter-spacing: 0.3rem;
+      font-size: 2rem;
+      color: $color-4;
+      text-transform: uppercase;
+    }
+    p {
+      line-height: 1.4;
+      letter-spacing: 0.07rem;
+      font-size: 1.2rem;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      padding: 15px;
+      border: 0.05rem solid $color-4;
+      backdrop-filter: blur(3px);
+      background: #ffffff1b;
+      border-radius: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+      color: $color-4;
+      width: min-content;
+      gap: 4px;
+      white-space: nowrap;
+    }
+  }
+  .victor-svg {
+    -webkit-filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.913));
+    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    position: absolute;
+    left: 0%;
+    top: -45%;
+
+    @media screen and (max-width: 815px) {
+      left: -8%;
+    }
+    @media screen and (max-width: 620px) {
+      left: -15%;
+    }
+    @media screen and (max-width: 470px) {
+      left: -40%;
+    }
+    @media screen and (max-width: 380px) {
+      left: -55%;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .hero-main-text {
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+  @media screen and (max-width: 660px) {
+    .hero-main-text {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+  @media screen and (max-width: 560px) {
+    .hero-main-text {
+      width: 100%;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7px);
+      border-radius: 0;
+      h2 {
+        font-size: 2.5rem;
+        white-space: inherit;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

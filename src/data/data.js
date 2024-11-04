@@ -6,7 +6,7 @@ export const projects = [
     url: "http://www.moulincasta.fr",
     img: imgMoulinCastaSite,
     description:
-      "Site créé pour un logement de vacances en Corse. L'objectif était de créer un site vitrine pour les propriétaires avec une authentification afin de permettre aux propriétaires de gérer les médias du site (ajouter et supprimer les photos de chaque logement) et les tarifs et disponibilités à l'aide d'un calendrier entièrement customisable, créé de A à Z. La partie technique était le composant calendrier car aucune librairie ne propose de calendrier avec les options désirées (réservations uniquement du samedi au samedi pour un des logements, gestion des tarifs pour chaque jour, indisponibilité/disponibilité des dates). Projet entièrement fonctionnel et clients très satisfaits.",
+      "Site vitrine créé pour un logement de vacances en Corse, permettant aux propriétaires de gérer médias, tarifs, et disponibilités via un calendrier personnalisé (réservations spécifiques, gestion tarifaire par jour). Projet fonctionnel avec clients très satisfaits.",
     frontendTech: [
       "React.js",
       "Redux Toolkit",
@@ -29,7 +29,7 @@ export const projects = [
       "Nodemon",
     ],
     stockageTech: ["MongoDB", "AWS S3 (médias)"],
-    deployTech: ["AWS EC2 sur plateforme Ubuntu (backend)", "Netlify"],
+    deployTech: ["AWS EC2 (Ubuntu)", "Netlify"],
   },
   {
     title: "Yoga Courses",

@@ -24,13 +24,10 @@
 }
 
 .art-page {
-  background: $color-1;
-  background: -webkit-linear-gradient(to right, $color-7, $color-1);
-  background: linear-gradient(to right, $color-7, $color-1);
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-top: 40px;
+  padding-top: 70px;
   position: relative;
   .cloud {
     pointer-events: none;

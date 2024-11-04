@@ -1,8 +1,21 @@
 @import "./settings.scss";
-@import "./pages/art";
-@import "./pages/home";
-@import "./pages/about";
-@import "./components/main";
+
+/* GENERAL */
 @import "./components/navbar";
 @import "./components/footer";
-@import "./components/progressBar";
+
+/* -- HOME PAGE --*/
+@import "./pages/home/home";
+@import "./pages/home/components/main";
+/* hero */
+@import "./pages/home/components/hero";
+@import "./pages/home/components/logosSlide";
+/* projects */
+@import "./pages/home/components/projects-section";
+/* scrolling Headers */
+@import "./pages/home/components/scrolling-section";
+/*-- ART PAGE --*/
+@import "./pages/art";
+
+/*-- ABOUT PAGE --*/
+@import "./pages/about";

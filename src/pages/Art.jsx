@@ -73,7 +73,7 @@ const Art = () => {
 
   return (
     <div className="art-page" ref={artPageRef}>
-      <motion.img
+      {/*     <motion.img
         className="cloud-one cloud"
         src={cloud1}
         alt=""
@@ -90,7 +90,7 @@ const Art = () => {
         src={cloud3}
         alt=""
         style={{ right: rightOther }}
-      />
+      /> */}
       {modal && (
         <div className="carousel-gallery-modal">
           <IoCloseCircle

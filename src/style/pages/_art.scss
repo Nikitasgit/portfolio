@@ -1,4 +1,4 @@
-@keyframes cloudMoving {
+/* @keyframes cloudMoving {
   from {
     transform: translateY(-10%);
   }
@@ -21,7 +21,7 @@
   to {
     transform: translateY(4%);
   }
-}
+} */
 
 .art-page {
   display: flex;
@@ -29,7 +29,7 @@
   gap: 40px;
   padding-top: 70px;
   position: relative;
-  .cloud {
+  /*   .cloud {
     pointer-events: none;
     position: fixed;
     z-index: 50;
@@ -56,7 +56,7 @@
 
     -webkit-animation: cloudMovingThree 10s ease-out -2s infinite alternate forwards;
     animation: cloudMovingThree 10s ease-out -2s infinite alternate forwards;
-  }
+  } */
 
   .carousel-gallery-modal {
     position: fixed;

@@ -17,11 +17,7 @@ const HomeMain = () => {
           performantes et intuitives en JavaScript, Node.js, React et Next.js.
         </p>
 
-        <a
-          class="download-cv"
-          href="../../../assets/files/cv-alternance-victor-leman.pdf"
-          download
-        >
+        <a class="download-cv" href="/cv-alternance-victor-leman.pdf" download>
           Télécharger CV
           <FaFileDownload className="download-icon" />
         </a>

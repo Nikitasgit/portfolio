@@ -42,6 +42,7 @@ const Art = () => {
       {images.map((image, index) =>
         index % 3 === 0 ? (
           <div
+            key={index}
             className={`grid-images ${
               index % 2 === 0 ? "grid" : "grid-reverse"
             }`}

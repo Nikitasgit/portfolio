@@ -1,67 +1,68 @@
-/* @keyframes cloudMoving {
-  from {
-    transform: translateY(-10%);
-  }
-  to {
-    transform: translateY(10%);
-  }
+.modal-open {
+  overflow: hidden;
 }
-@keyframes cloudMovingTwo {
-  from {
-    transform: translateY(5%);
-  }
-  to {
-    transform: translateY(-7%);
-  }
-}
-@keyframes cloudMovingThree {
-  from {
-    transform: translateY(-2%);
-  }
-  to {
-    transform: translateY(4%);
-  }
-} */
-
 .art-page {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   padding-top: 70px;
   position: relative;
-  /*   .cloud {
-    pointer-events: none;
-    position: fixed;
-    z-index: 50;
+  background: -webkit-linear-gradient(to right, $color-5, $color-1);
+  background: linear-gradient(to right, $color-5, $color-1);
+  .grid-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    margin: 0 auto;
+    width: 55%;
+    div {
+      aspect-ratio: 3/4;
+      min-height: 100%;
+    }
+    .grid-main {
+      grid-area: main;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 5px;
+      height: 100%;
+      object-fit: cover;
+      object-fit: center;
+    }
   }
-  .cloud-one {
-    height: 600px;
-    left: 0%;
-    top: 0%;
-    opacity: 0.7;
-    -webkit-animation: cloudMoving 10s ease-out -2s infinite alternate forwards;
-    animation: cloudMoving 10s ease-out -2s infinite alternate forwards;
+  .grid {
+    grid-template-areas:
+      ". main main"
+      ". main main";
   }
-  .cloud-two {
-    height: 800px;
-    right: 0%;
-    top: 50%;
-    -webkit-animation: cloudMovingTwo 10s ease-out -2s infinite alternate forwards;
-    animation: cloudMovingTwo 10s ease-out -2s infinite alternate forwards;
+  .grid-reverse {
+    grid-template-areas:
+      "main main ."
+      "main main .";
   }
-  .cloud-three {
-    height: 400px;
 
-    top: -20%;
+  @media screen and (max-width: 900px) {
+    gap: 15px;
+    .grid-images {
+      width: 90%;
+      gap: 15px;
+    }
+  }
 
-    -webkit-animation: cloudMovingThree 10s ease-out -2s infinite alternate forwards;
-    animation: cloudMovingThree 10s ease-out -2s infinite alternate forwards;
-  } */
-
+  @media screen and (max-width: 500px) {
+    gap: 30px;
+    padding: 70px 10px 0;
+    .grid-images {
+      gap: 10px;
+      width: 100%;
+    }
+  }
   .carousel-gallery-modal {
     position: fixed;
-    background: #ffffff;
-    backdrop-filter: blur(2px);
+    background-color: white;
     height: 100vh;
     height: 100svh;
     width: 100%;
@@ -76,11 +77,6 @@
       left: 40px;
       font-size: 2.5rem;
       transition: 0.3s;
-
-      &:hover {
-        cursor: pointer;
-        opacity: 0.6;
-      }
     }
     .carousel {
       user-select: none;
@@ -118,10 +114,8 @@
       padding: 5px;
       border-radius: 5px;
       display: flex;
+
       transition: 0.3s;
-      &:hover {
-        cursor: pointer;
-      }
       img {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 5px;
@@ -130,35 +124,6 @@
         width: 100%;
         height: 100%;
       }
-    }
-  }
-
-  @media screen and (max-width: 900px) {
-    .cloud-one {
-      height: 400px;
-    }
-    .cloud-two {
-      height: 400px;
-    }
-    .container-images {
-      max-width: 90%;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .cloud-one,
-    .cloud-two {
-      height: 280px;
-      opacity: 0.85;
-    }
-    .cloud-three {
-      height: 200px;
-      top: 80%;
-      opacity: 0.7;
-    }
-    .container-images {
-      max-width: 100%;
-      padding: 0 5px;
     }
   }
 }

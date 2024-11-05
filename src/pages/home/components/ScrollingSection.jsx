@@ -16,10 +16,10 @@ function Item({ props }) {
     ["blur(10px)", "blur(0px)", "blur(0px)", "blur(10px)"]
   );
   const assignFontSize = () => {
+    /*    if (windowDimensions.width < 400) {
+      return ["1.2rem", "2.4rem", "1.8rem", "1.2rem"];
+    } */
     if (windowDimensions.width < 400) {
-      return ["1.2rem", "2rem", "1.8rem", "1.2rem"];
-    }
-    if (windowDimensions.width < 500) {
       return ["1.7rem", "2.8rem", "2.2rem", "1.7rem"];
     }
     if (windowDimensions.width < 650) {

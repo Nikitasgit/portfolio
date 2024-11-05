@@ -1,13 +1,21 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import Logo from "./svg/LogoSvg";
 
 const Navbar = () => {
-  const pages = [
-    { path: "/", title: "Home" },
-    { path: "/art", title: "Illustrations" },
-    /*     { path: "/about", title: "À propos" }, */
-  ];
+  const location = useLocation();
+  const [pages, setPages] = useState([
+    { path: "/", title: "Développeur", className: "" },
+    { path: "/art", title: "Illustrations", className: "" },
+    /* { path: "/about", title: "À propos" }, */
+  ]);
+  useEffect(() => {
+    const updatedPages = pages.map((page) => ({
+      ...page,
+      className: page.path === location.pathname ? "on-page" : "",
+    }));
+    setPages(updatedPages);
+  }, [location.pathname]);
 
   return (
     <div className="navbar">
@@ -16,7 +24,7 @@ const Navbar = () => {
       </NavLink>
       <ul className="menu">
         {pages.map((page) => (
-          <li key={page.path}>
+          <li className={page.className} key={page.path}>
             <NavLink to={page.path}>{page.title}</NavLink>
           </li>
         ))}

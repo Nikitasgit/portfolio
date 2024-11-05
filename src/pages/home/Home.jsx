@@ -1,9 +1,9 @@
-/* import HomeFourthPart from "../../components/HomeFourthPart"; */
 import Hero from "../home/components/Hero";
 import Projects from "../home/components/Projects";
 import squid from "../../assets/images/calamar.png";
-import huppe from "../../assets/images/huppe-fascie.png";
+import huppe from "../../assets/images/gallery/huppe-fascie.png";
 import ScrollingSection from "./components/ScrollingSection";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
       <Hero />
       <Projects />
       <ScrollingSection />
-      {/*     <HomeFourthPart /> */}
+      <Footer />
     </div>
   );
 };

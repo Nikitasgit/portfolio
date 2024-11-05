@@ -1,14 +1,5 @@
-@font-face {
-  font-family: "Urbanist-VariableFont_wght";
-  src: url(../assets/fonts/Urbanist-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: "Righteous-Regular";
-  src: url(../assets/fonts/Righteous-Regular.ttf);
-}
-
-$font-1: "Urbanist-VariableFont_wght";
-$font-2: "Righteous-Regular";
+$font-1: "urbanist", sans-serif;
+$font-2: "Righteous", sans-serif;
 
 $color-1: #1d515e; /* background color blue */
 $color-2: #e6e6e6; /* White slightly gray */
@@ -28,8 +19,6 @@ body {
   color: $color-2;
   overflow-x: hidden;
   font-family: $font-1;
-  background: -webkit-linear-gradient(to right, $color-5, $color-1);
-  background: linear-gradient(to right, $color-5, $color-1);
 }
 h2 {
   font-size: 4rem;
@@ -37,9 +26,6 @@ h2 {
 a {
   color: $color-2;
   transition: 0.3s;
-}
-a:hover {
-  opacity: 70%;
 }
 
 /* SMOOTH SCROLL  */
@@ -74,4 +60,42 @@ html.lenis {
 
 .skeleton {
   animation: skeleton-loading 2s linear infinite alternate;
+}
+.scroll-top-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  z-index: 1000;
+  font-size: 2rem;
+  color: $color-2;
+  border-radius: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media (hover: hover) {
+  a:hover {
+    opacity: 70%;
+  }
+  .logo-svg:hover .logo-top-line {
+    transform: translateY(5px);
+    opacity: 0.5;
+  }
+  .logo-svg:hover .logo-bottom-line {
+    transform: translateY(-5px);
+    opacity: 0.5;
+  }
+  .close-modal-icon {
+    cursor: pointer;
+    opacity: 70%;
+  }
+  .container-images {
+    .img-container :hover {
+      cursor: pointer;
+    }
+  }
+  .scroll-top-button:hover {
+    color: $color-3;
+  }
 }

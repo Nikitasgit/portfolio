@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const ImgSliderGallery = ({ imgs }) => {
+const ImgSliderGallery = ({ imgs, index }) => {
   return (
     <Swiper
       className="carousel"
@@ -17,6 +17,7 @@ const ImgSliderGallery = ({ imgs }) => {
       spaceBetween={10}
       slidesPerView={1}
       navigation
+      initialSlide={index}
       pagination={{ clickable: true }}
     >
       {imgs.map((image) => (

@@ -15,7 +15,7 @@ const Navbar = () => {
       className: page.path === location.pathname ? "on-page" : "",
     }));
     setPages(updatedPages);
-  }, [location.pathname]);
+  }, [location.pathname, pages]);
 
   return (
     <div className="navbar">

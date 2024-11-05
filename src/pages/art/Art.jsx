@@ -3,6 +3,7 @@ import ImgSliderGallery from "../../components/ImgSliderGallery";
 import Footer from "../../components/Footer";
 import { IoCloseCircle } from "react-icons/io5";
 import Hero from "./components/Hero";
+import { Helmet } from "react-helmet";
 const importAll = (requireContext) => requireContext.keys().map(requireContext);
 const images = importAll(
   require.context("../../assets/images/gallery", false, /\.(png|jpe?g|svg)$/)
@@ -29,6 +30,15 @@ const Art = () => {
   }, [modal]);
   return (
     <div ref={artPageRef} className="art-page">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Victor Leman - Illustrations</title>
+        <meta
+          name="description"
+          content="Dessins, illustrations et linogravures."
+        />
+        <link rel="canonical" href="https://victorleman.netlify.app/art" />
+      </Helmet>
       <Hero />
       {modal && (
         <div className="carousel-gallery-modal">

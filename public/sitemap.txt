@@ -1,2 +1,2 @@
-https://victorleman.netlify.app/
-https://victorleman.netlify.app/art
+https://victorleman.vercel.app/
+https://victorleman.vercel.app/art

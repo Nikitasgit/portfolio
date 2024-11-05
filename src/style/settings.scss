@@ -110,4 +110,7 @@ html.lenis {
     cursor: pointer;
     opacity: 0.8;
   }
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
 }

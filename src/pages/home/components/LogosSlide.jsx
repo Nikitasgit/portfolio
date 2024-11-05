@@ -11,77 +11,77 @@ const logosSlide = () => {
       <div className="logos-slide">
         <div className="logo-container">
           <IoLogoHtml5 className="logos-slide-item" />
-          HTML
+          <span>HTML</span>
         </div>
         <div className="logo-container">
           <FaCss3Alt className="logos-slide-item" />
-          CSS
+          <span>CSS</span>
         </div>
         <div className="logo-container">
           <IoLogoJavascript className="logos-slide-item" />
-          JavaScript
+          <span>Javascript</span>
         </div>
         <div className="logo-container">
           <FaNodeJs className="logos-slide-item" />
-          Node.js
+          <span>Node.js</span>
         </div>
         <div className="logo-container">
           <SiNextdotjs className="logos-slide-item" />
-          Next.js
+          <span>Next.js</span>
         </div>
         <div className="logo-container">
           <SiMongodb className="logos-slide-item" />
-          MongoDB
+          <span>MongoDB</span>
         </div>
         <div className="logo-container">
           <TbBrandFramerMotion className="logos-slide-item" />
-          Framer Motion
+          <span>Framer Motion</span>
         </div>
         <div className="logo-container">
           <SiRedux className="logos-slide-item" />
-          SiRedux
+          <span>Redux</span>
         </div>
         <div className="logo-container">
           <FaSass className="logos-slide-item" />
-          Sass
+          <span>Sass</span>
         </div>
       </div>
       <div className="logos-slide">
         <div className="logo-container">
           <IoLogoHtml5 className="logos-slide-item" />
-          HTML
+          <span>HTML</span>
         </div>
         <div className="logo-container">
           <FaCss3Alt className="logos-slide-item" />
-          CSS
+          <span>CSS</span>
         </div>
         <div className="logo-container">
           <IoLogoJavascript className="logos-slide-item" />
-          JavaScript
+          <span>Javascript</span>
         </div>
         <div className="logo-container">
           <FaNodeJs className="logos-slide-item" />
-          Node.js
+          <span>Node.js</span>
         </div>
         <div className="logo-container">
           <SiNextdotjs className="logos-slide-item" />
-          Next.js
+          <span>Nex.js</span>
         </div>
         <div className="logo-container">
           <SiMongodb className="logos-slide-item" />
-          MongoDB
+          <span>MongoDB</span>
         </div>
         <div className="logo-container">
           <TbBrandFramerMotion className="logos-slide-item" />
-          Framer Motion
+          <span>Framer Motion</span>
         </div>
         <div className="logo-container">
           <SiRedux className="logos-slide-item" />
-          SiRedux
+          <span>Redux</span>
         </div>
         <div className="logo-container">
           <FaSass className="logos-slide-item" />
-          Sass
+          <span>Sass</span>
         </div>
       </div>
     </div>

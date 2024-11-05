@@ -10,11 +10,12 @@ const Navbar = () => {
     /* { path: "/about", title: "À propos" }, */
   ]);
   useEffect(() => {
-    const updatedPages = pages.map((page) => ({
-      ...page,
-      className: page.path === location.pathname ? "on-page" : "",
-    }));
-    setPages(updatedPages);
+    setPages((prevPages) =>
+      prevPages.map((page) => ({
+        ...page,
+        className: page.path === location.pathname ? "on-page" : "",
+      }))
+    );
   }, [location.pathname]);
 
   return (

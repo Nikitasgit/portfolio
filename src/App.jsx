@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Art from "./pages/art/Art";
 import Home from "./pages/home/Home";
-import About from "./pages/About";
+/* import About from "./pages/About"; */
 import Lenis from "@studio-freight/lenis";
 import Navbar from "./components/Navbar";
 import ScrollReset from "./components/ScrollReset";

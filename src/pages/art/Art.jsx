@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import ImgSliderGallery from "../components/ImgSliderGallery";
-import Footer from "../components/Footer";
+import ImgSliderGallery from "../../components/ImgSliderGallery";
+import Footer from "../../components/Footer";
 import { IoCloseCircle } from "react-icons/io5";
-
+import Hero from "./components/Hero";
 const importAll = (requireContext) => requireContext.keys().map(requireContext);
 const images = importAll(
-  require.context("../assets/images/gallery", false, /\.(png|jpe?g|svg)$/)
+  require.context("../../assets/images/gallery", false, /\.(png|jpe?g|svg)$/)
 );
 
 const Art = () => {
@@ -29,6 +29,7 @@ const Art = () => {
   }, [modal]);
   return (
     <div ref={artPageRef} className="art-page">
+      <Hero />
       {modal && (
         <div className="carousel-gallery-modal">
           <IoCloseCircle

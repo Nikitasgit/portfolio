@@ -47,7 +47,10 @@
     bottom: 0;
   }
   @media screen and (max-width: 560px) {
-    padding: 20px;
+    padding: 10px;
+    .menu {
+      gap: 10px;
+    }
   }
   @media screen and (max-width: 410px) {
     .logo-svg {
